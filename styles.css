@@ -1,0 +1,208 @@
+/* styles.css */
+
+/* Обнулите стили */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.header {
+    height: 76px;
+    box-sizing: border-box;
+}
+
+.header__search {
+    width: 288px;
+    height: 41px;
+    margin: 0px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    background: transparent;
+}
+
+.header__search::placeholder {
+    padding: 10.5px 32px 10.5px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+/* Для верхних ссылок «Каталог» и «Корзина» в шапке сайта: */
+.ulist__link {
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: white
+}
+
+/* Для заголовка (Всё, чего заслуживает ваш дом): */
+.title__name {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-top: 64px;
+    padding-bottom: 16px;
+    color: white
+}
+
+/* Параграфу p (Наша мебель — ваше отражение): */
+.title__description {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: white
+}
+
+/* Ссылке <a href="catalog.html">Перейти в каталог</a> */
+.title__link {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    list-style-type: none;
+    color: white
+}
+
+/* Заголовку h2 (Специальные предложения): */
+.division {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+    color: #000000;
+    padding-bottom: 32px;
+}
+
+/* Заголовку h3 (Кресло VILORA): */
+.card__product {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+/* Параграфу p (Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и приятная на ощупь ткань): */
+.card__description {
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    margin-bottom: 12px;
+}
+
+/* Параграфу p (21 000): */
+.card__price {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    color: #050505;
+}
+
+/* Параграфу p (28 000): */
+.card__price_old {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    text-decoration-line: line-through;
+    color: #888888;
+}
+
+
+.footer {
+    background-color: #F7F6F6;
+}
+
+/* Заголовку h4 (Меню и Контакты): */
+.footer__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    color: #000000;
+}
+
+/**/
+.footer__title:first-of-type {
+    padding-bottom: 12px;
+}
+
+/* Нижним ссылкам в подвале сайта (Главная, Каталог, Корзина, номер телефона и email): */
+.footer__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: grey;
+    text-decoration: none;
+}
+
+/* Параграфу p (Получайте наши новости и обновления): */
+.footer__text {
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+/* Полю ввода <input type="email"> : */
+.form__input {
+    width: 260px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #c4c4c4;
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.form__input::placeholder {
+    padding-left: 14px;
+    color: rgb(196, 196, 196);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+/* Кнопке <button>Подписаться</button> : */
+.form__button {
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+    background: rgba(222, 215, 215, 0.41);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 275px;
+    height: 46px;
+}
+
+/* Нижнее подчеркивание при наведении на все ссылки */
+.link:hover {
+    text-decoration: underline;
+}
+
+.ulist {
+    list-style-type: none;
+}
+
+.font {
+    font: inherit
+}
+
+.header-block {
+    height: 735px;
+    background-image: url(./img/Rectangle\ 15.jpeg);
+    background-size: cover;
+    background-position: center;
+}
