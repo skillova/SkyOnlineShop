@@ -14,12 +14,12 @@
 
 <body>
 
-    <div class="header-block">
+    <div class="header-box center">
         <header class="header">
             <img src="./img/logo.svg" alt="Логотип">
             <input class="header__search font" type="text" placeholder="Поиск">
             <nav>
-                <ul class="ulist">
+                <ul class="ulist ulist_inline">
                     <li><a class="link ulist__link" href="./catalog.html">Каталог</a></li>
                     <li><a class="link ulist__link" href="#">Корзина</a></li>
                 </ul>
@@ -33,118 +33,150 @@
         </section>
     </div>
 
-    <div>
-        <h2 class="division">Мебель для ...</h2>
-    </div>
-    <section>
-        <article class="card">
-            <img src="./img/Rectangle 1.jpeg" alt="отдых">
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 2.jpeg" alt="работа">
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 3.jpeg" alt="кухни">
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 4.jpeg" alt="детская">
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 5.jpeg" alt="ванная">
-        </article>
+    <section class="content-section center">
+        <h2 class="content-title">Мебель для ...</h2>
+        <div class="content-box">
+            <article class="card">
+                <img src="./img/Rectangle 1.jpeg" alt="отдых">
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 2.jpeg" alt="работа">
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 3.jpeg" alt="кухни">
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 4.jpeg" alt="детская">
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 5.jpeg" alt="ванная">
+            </article>
+        </div>
     </section>
 
-    <section>
-        <h2 class="division">Специальные предложения</h2>
-        <article class="card">
-            <img src="./img/Rectangle 11.jpeg" alt="Люстра VODA">
-            <h3 class="card__product">Люстра VODA</h3>
-            <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий
-                эффект.</p>
-            <p class="card__price">45 000 руб.</p>
-            <p class="card__price card__price_old">67 000 руб.</p>
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 12.jpeg" alt="Диван RONALD">
-            <h3 class="card__product">Диван RONALD</h3>
-            <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора.</p>
-            <p class="card__price">156 000 руб.</p>
-            <p class="card__price card__price_old">198 000 руб.</p>
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 13.jpeg" alt="Комод VENT">
-            <h3 class="card__product">Комод VENT</h3>
-            <p class="card__description">Европейский дуб - отличается особой прочностью и стабильностью.</p>
-            <p class="card__price">34 000 руб.</p>
-            <p class="card__price card__price_old">45 000 руб.</p>
-        </article>
+    <section class="content-section center">
+        <h2 class="content-title">Специальные предложения</h2>
+        <div class="content-box">
+            <article class="card">
+                <img class="card__img" src="./img/Rectangle 11.jpeg" alt="Люстра VODA">
+                <h3 class="card__name">Люстра VODA</h3>
+                <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий
+                    эффект.</p>
+                <div class="card-price">
+                    <span class="price">45 000 руб.</span>
+                    <span class="price price_old">67 000 руб.</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 12.jpeg" alt="Диван RONALD">
+                <h3 class="card__name">Диван RONALD</h3>
+                <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора.</p>
+                <div class="card-price">
+                    <span class="price">156 000 руб.</span>
+                    <span class="price price_old">198 000 руб.</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 13.jpeg" alt="Комод VENT">
+                <h3 class="card__name">Комод VENT</h3>
+                <p class="card__description">Европейский дуб - отличается особой прочностью и стабильностью.</p>
+                <div class="card-price">
+                    <span class="price">34 000 руб.</span>
+                    <span class="price price_old">45 000 руб.</span>
+                </div>
+            </article>
+        </div>
     </section>
 
-    <section>
-        <h2 class="division">Каталог товаров</h2>
-        <article class="card">
-            <img src="./img/Rectangle 31.jpeg" alt="Кровать TATRAN">
-            <h3 class="card__product">Кровать TATRAN</h3>
-            <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий
-                эффект.</p>
-            <p class="card__price">120 000 руб.</p>
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 32.jpeg" alt="Кресло VILORA">
-            <h3 class="card__product">Кресло VILORA</h3>
-            <p class="card__description">Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на
-                ощупь
-                ткань</p>
-            <p class="card__price">21 000 руб.</p>
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 33.jpeg" alt="Стол MENU">
-            <h3 class="card__product">Стол MENU</h3>
-            <p class="card__description">МДля того чтобы трапезничать было приятно, необходим правильный обеденный стол.
-            </p>
-            <p class="card__price">34 000 руб.</p>
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 34.jpeg" alt="Кресло ASKESTA">
-            <h3 class="card__product">Кресло ASKESTA</h3>
-            <p class="card__description">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки</p>
-            <p class="card__price">68 000 руб.</p>
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 35.jpeg" alt="Стол NORMAN">
-            <h3 class="card__product">Стол NORMAN</h3>
-            <p class="card__description">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки</p>
-            <p class="card__price">40 000 руб.</p>
-        </article>
-        <article class="card">
-            <img src="./img/Rectangle 36.jpeg" alt="Диван NASTAN">
-            <h3 class="card__product">Диван NASTAN</h3>
-            <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора. </p>
-            <p class="card__price">80 000 руб.</p>
-        </article>
+    <section class="content-section center">
+        <h2 class="content-title">Каталог товаров</h2>
+        <div class="content-box">
+            <article class="card">
+                <img src="./img/Rectangle 31.jpeg" alt="Кровать TATRAN">
+                <h3 class="card__name">Кровать TATRAN</h3>
+                <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий
+                    эффект.</p>
+                <div class="card-price">
+                    <span class="price">120 000 руб.</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 32.jpeg" alt="Кресло VILORA">
+                <h3 class="card__name">Кресло VILORA</h3>
+                <p class="card__description">Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная
+                    на
+                    ощупь ткань</p>
+                <div class="card-price">
+                    <span class="price">21 000 руб.</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 33.jpeg" alt="Стол MENU">
+                <h3 class="card__name">Стол MENU</h3>
+                <p class="card__description">МДля того чтобы трапезничать было приятно, необходим правильный обеденный
+                    стол.
+                </p>
+                <div class="card-price">
+                    <span class="price">34 000 руб.</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 34.jpeg" alt="Кресло ASKESTA">
+                <h3 class="card__name">Кресло ASKESTA</h3>
+                <p class="card__description">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки</p>
+                <div class="card-price">
+                    <span class="price">68 000 руб.</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 35.jpeg" alt="Стол NORMAN">
+                <h3 class="card__name">Стол NORMAN</h3>
+                <p class="card__description">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки</p>
+                <div class="card-price">
+                    <span class="price">40 000 руб.</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="./img/Rectangle 36.jpeg" alt="Диван NASTAN">
+                <h3 class="card__name">Диван NASTAN</h3>
+                <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора. </p>
+                <div class="card-price">
+                    <span class="price">80 000 руб.</span>
+                </div>
+            </article>
+            <a class="content-box__link link" href="catalog.html">Перейти в каталог</a>
+        </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer center">
         <img class="footer__logo" src="./img/Интерьер..svg" alt="Логотип">
-        <h4 class="footer__title">Меню</h4>
-        <nav>
-            <ul class="ulis">
-                <li><a class="footer__link" href="./index.html">Главная</a></li>
-                <li><a class="footer__link" href="./catalog.html">Каталог</a></li>
-                <li><a class="footer__link" href="#">Корзина</a></li>
-            </ul>
-        </nav>
-        <h4 class="footer__title">Контакты</h4>
-        <a class="link footer__link" href="tel:+79088008080">+7 908 800 80 80</a>
-        <a class="link footer__link" href="mailto:help@interier.com">help@interier.com</a>
-        <img src="./img/vk.svg" alt="Логотип ВК">
-        <img src="./img/telegram.svg" alt="Логотип Телеграмм">
-        <img src="./img/dzen.svg" alt="Логотип Дзен">
-        <p class="footer__text">Получайте наши новости и обновления</p>
-        <form class="form" action="#">
-            <input class="form__input font" type="email" placeholder="Ваш e-mail">
-            <button class="form__button font" type="submit">Подписаться</button>
-        </form>
+        <div class="footer__menu">
+            <h4 class="footer__title">Меню</h4>
+            <nav>
+                <ul class="ulist">
+                    <li><a class="footer__link link " href="./index.html">Главная</a></li>
+                    <li><a class="footer__link link " href="./catalog.html">Каталог</a></li>
+                    <li><a class="footer__link link " href="#">Корзина</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__contacts">
+            <h4 class="footer__title">Контакты</h4>
+            <a class="footer__link link " href="tel:+79088008080">+7 908 800 80 80</a>
+            <a class="footer__link link " href="mailto:help@interier.com">help@interier.com</a>
+            <div class="social-logo">
+                <img class="social-logo__img" src="./img/vk.svg" alt="Логотип ВК">
+                <img class="social-logo__img" src="./img/telegram.svg" alt="Логотип Телеграмм">
+                <img class="social-logo__img" src="./img/dzen.svg" alt="Логотип Дзен">
+            </div>
+        </div>
+        <div class="footer__subscribe">
+            <p class="footer__text">Получайте наши новости и обновления</p>
+            <form class="form" action="#">
+                <input class="form__input font" type="email" placeholder="Ваш e-mail">
+                <button class="form__button font" type="submit">Подписаться</button>
+            </form>
+        </div>
     </footer>
 
 </body>

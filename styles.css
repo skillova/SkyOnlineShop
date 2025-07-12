@@ -1,6 +1,5 @@
 /* styles.css */
 
-/* Обнулите стили */
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +9,17 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+.center {
+    padding: 0 calc((100% - 1200px)/2)
+}
+
 .header {
     height: 76px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
 }
 
 .header__search {
@@ -36,7 +43,6 @@ body {
     text-align: left;
 }
 
-/* Для верхних ссылок «Каталог» и «Корзина» в шапке сайта: */
 .ulist__link {
     font-size: 16px;
     line-height: 20px;
@@ -44,7 +50,6 @@ body {
     color: white
 }
 
-/* Для заголовка (Всё, чего заслуживает ваш дом): */
 .title__name {
     font-size: 64px;
     font-weight: 600;
@@ -54,7 +59,6 @@ body {
     color: white
 }
 
-/* Параграфу p (Наша мебель — ваше отражение): */
 .title__description {
     font-size: 24px;
     line-height: 32px;
@@ -62,7 +66,6 @@ body {
     color: white
 }
 
-/* Ссылке <a href="catalog.html">Перейти в каталог</a> */
 .title__link {
     font-size: 16px;
     line-height: 24px;
@@ -71,8 +74,12 @@ body {
     color: white
 }
 
-/* Заголовку h2 (Специальные предложения): */
-.division {
+.content-section {
+    margin-bottom: 72px;
+}
+
+.content-title {
+    font-style: normal;
     font-size: 48px;
     font-weight: 600;
     line-height: 59px;
@@ -80,33 +87,58 @@ body {
     padding-bottom: 32px;
 }
 
-/* Заголовку h3 (Кресло VILORA): */
-.card__product {
+.content-box {
+    display: flex;
+    gap: 31px;
+    flex-wrap: wrap;
+}
+
+.content-box__link {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.card {
+    width: 378px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__name {
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
     color: #000000;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 9px;
 }
 
-/* Параграфу p (Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и приятная на ощупь ткань): */
 .card__description {
     font-size: 14px;
     line-height: 17px;
     color: #888888;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 
-/* Параграфу p (21 000): */
-.card__price {
+.card-price {
+    display: flex;
+    gap: 32px;
+}
+
+.price {
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
     color: #050505;
 }
 
-/* Параграфу p (28 000): */
-.card__price_old {
+.price_old {
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
@@ -117,9 +149,14 @@ body {
 
 .footer {
     background-color: #F7F6F6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 64px;
+    padding-bottom: 58px;
 }
 
-/* Заголовку h4 (Меню и Контакты): */
 .footer__title {
     font-size: 24px;
     font-weight: 500;
@@ -127,29 +164,32 @@ body {
     color: #000000;
 }
 
-/**/
 .footer__title:first-of-type {
     padding-bottom: 12px;
 }
 
-/* Нижним ссылкам в подвале сайта (Главная, Каталог, Корзина, номер телефона и email): */
 .footer__link {
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
     color: grey;
     text-decoration: none;
+    margin-bottom: 12px;
 }
 
-/* Параграфу p (Получайте наши новости и обновления): */
 .footer__text {
     font-size: 12px;
     line-height: 15px;
+    text-align: left;
     color: #000000;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
-/* Полю ввода <input type="email"> : */
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
 .form__input {
     width: 260px;
     height: 40px;
@@ -161,6 +201,7 @@ body {
     border: 1px solid #c4c4c4;
     box-sizing: border-box;
     border-radius: 20px;
+    margin-bottom: 8px;
 }
 
 .form__input::placeholder {
@@ -174,7 +215,6 @@ body {
     text-align: left;
 }
 
-/* Кнопке <button>Подписаться</button> : */
 .form__button {
     font-size: 12px;
     line-height: 18px;
@@ -183,11 +223,10 @@ body {
     border: 1px solid #ffffff;
     box-sizing: border-box;
     border-radius: 20px;
-    width: 275px;
+    width: 260px;
     height: 46px;
 }
 
-/* Нижнее подчеркивание при наведении на все ссылки */
 .link:hover {
     text-decoration: underline;
 }
@@ -196,13 +235,38 @@ body {
     list-style-type: none;
 }
 
+.ulist_inline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
 .font {
     font: inherit
 }
 
-.header-block {
+.header-box {
     height: 735px;
     background-image: url(./img/Rectangle\ 15.jpeg);
     background-size: cover;
     background-position: center;
+    margin-bottom: 64px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-logo {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.social-logo__img {
+    width: 19px;
+    height: 18px;
+    margin-right: 20px;
 }
