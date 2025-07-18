@@ -59,6 +59,33 @@ body {
     color: white
 }
 
+.catalog-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.path {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style-type: none;
+    align-items: center;
+}
+
+.path__text {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.catalog-filter {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .title__description {
     font-size: 24px;
     line-height: 32px;
@@ -73,7 +100,7 @@ body {
     color: white
 }
 
-.content-category {
+.content {
     margin-bottom: 64px;
 }
 
@@ -91,7 +118,7 @@ body {
     font-weight: 600;
     line-height: 59px;
     color: #000000;
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .content-box {
@@ -101,16 +128,55 @@ body {
     flex-wrap: wrap;
 }
 
-.content-link {
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    list-style-type: none;
-}
-
 .card {
     width: 378px;
     display: flex;
     flex-direction: column;
+}
+
+.card-grid {
+    width: 378px;
+    grid-column: span 4;
+    position: relative;
+}
+
+.card-big {
+    grid-column: span 6;
+    width: auto;
+}
+
+.card-box {
+    display: grid;
+    row-gap: 31px;
+    column-gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.card-box_catalog {
+    row-gap: 48px;
+}
+
+.card-grid__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 41px;
+}
+
+.card-grid__text_higher {
+    top: 166px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.content-link {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    list-style-type: none;
 }
 
 .card__img {
@@ -138,14 +204,14 @@ body {
     gap: 32px;
 }
 
-.price {
+.card-price__price {
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
     color: #050505;
 }
 
-.price_old {
+.card-price__sale {
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
@@ -154,7 +220,6 @@ body {
 }
 
 .footer {
-    height: 207px;
     background-color: #F7F6F6;
     display: flex;
     flex-direction: row;
@@ -162,6 +227,13 @@ body {
     align-items: flex-start;
     margin-top: 64px;
     padding-top: 32px;
+    padding-bottom: 58px;
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .footer__title {
@@ -169,17 +241,14 @@ body {
     font-weight: 500;
     line-height: 29px;
     color: #000000;
-    padding-bottom: 12px;
 }
 
 .footer__link {
-    display: block;
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
     color: grey;
     text-decoration: none;
-    padding-bottom: 12px;
 }
 
 .footer__text {
@@ -187,12 +256,12 @@ body {
     line-height: 15px;
     text-align: left;
     color: #000000;
-    margin-bottom: 8px;
 }
 
 .footer__contacts {
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
 .form__input {
@@ -206,7 +275,6 @@ body {
     border: 1px solid #c4c4c4;
     box-sizing: border-box;
     border-radius: 20px;
-    margin-bottom: 8px;
 }
 
 .form__input::placeholder {
@@ -259,19 +327,65 @@ body {
     margin-bottom: 64px;
 }
 
+.header-box-ctg {
+    height: 400px;
+    background-image: url(./img/ctg_head.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 61px;
+}
+
 .form {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 
 .social-logo {
     display: flex;
     flex-direction: row;
-
+    gap: 10px;
 }
 
 .social-logo__img {
     width: 19px;
     height: 18px;
-    margin-right: 20px;
+}
+
+.footer__subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.drop-list {
+    width: 182px;
+    height: 40px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 20px;
+    appearance: none;
+    background: url('./img/Polygon\ 1.svg') no-repeat right 22px center;
+}
+
+.drop-list-filter {
+    width: 182px;
+    height: 40px;
+}
+
+.drop-list_sort {
+    width: 227px;
+    height: 40px;
+}
+
+.drop-list_sort {
+    width: 227px;
+    height: 40px;
+}
+
+.drop-list-text {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 9px 54px 11px 23px;
 }

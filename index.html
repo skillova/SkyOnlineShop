@@ -33,23 +33,28 @@
         </section>
     </div>
 
-    <section class="content-category center">
+    <section class="content center">
         <h2 class="content-title">Мебель для ...</h2>
-        <div class="content-box">
-            <article class="card">
+        <div class="card-box">
+            <article class="card-grid card-big">
                 <img src="./img/Rectangle 1.jpeg" alt="отдых">
+                <span class="card-grid__text">ОТДЫХА</span>
             </article>
-            <article class="card">
+            <article class="card-grid card-big">
                 <img src="./img/Rectangle 2.jpeg" alt="работа">
+                <span class="card-grid__text card-grid__text_higher">РАБОТЫ</span>
             </article>
-            <article class="card">
+            <article class="card-grid">
                 <img src="./img/Rectangle 3.jpeg" alt="кухни">
+                    <span class="card-grid__text">КУХНИ</span>
             </article>
-            <article class="card">
+            <article class="card-grid">
                 <img src="./img/Rectangle 4.jpeg" alt="детская">
+                    <span class="card-grid__text">ДЕТСКОЙ</span>
             </article>
-            <article class="card">
+            <article class="card-grid">
                 <img src="./img/Rectangle 5.jpeg" alt="ванная">
+                    <span class="card-grid__text">ВАННОЙ</span>
             </article>
         </div>
     </section>
@@ -63,8 +68,8 @@
                 <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий
                     эффект.</p>
                 <div class="card-price">
-                    <span class="price">45 000 руб.</span>
-                    <span class="price price_old">67 000 руб.</span>
+                    <span class="card-price__price">45 000 руб.</span>
+                    <span class="card-price__sale">67 000 руб.</span>
                 </div>
             </article>
             <article class="card">
@@ -72,8 +77,8 @@
                 <h3 class="card__name">Диван RONALD</h3>
                 <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора.</p>
                 <div class="card-price">
-                    <span class="price">156 000 руб.</span>
-                    <span class="price price_old">198 000 руб.</span>
+                    <span class="card-price__price">156 000 руб.</span>
+                    <span class="card-price__sale">198 000 руб.</span>
                 </div>
             </article>
             <article class="card">
@@ -81,8 +86,8 @@
                 <h3 class="card__name">Комод VENT</h3>
                 <p class="card__description">Европейский дуб - отличается особой прочностью и стабильностью.</p>
                 <div class="card-price">
-                    <span class="price">34 000 руб.</span>
-                    <span class="price price_old">45 000 руб.</span>
+                    <span class="card-price__price">34 000 руб.</span>
+                    <span class="card-price__sale">45 000 руб.</span>
                 </div>
             </article>
         </div>
@@ -97,7 +102,7 @@
                 <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий
                     эффект.</p>
                 <div class="card-price">
-                    <span class="price">120 000 руб.</span>
+                    <span class="card-price__price">120 000 руб.</span>
                 </div>
             </article>
             <article class="card">
@@ -107,7 +112,7 @@
                     на
                     ощупь ткань</p>
                 <div class="card-price">
-                    <span class="price">21 000 руб.</span>
+                    <span class="card-price__price">21 000 руб.</span>
                 </div>
             </article>
             <article class="card">
@@ -117,7 +122,7 @@
                     стол.
                 </p>
                 <div class="card-price">
-                    <span class="price">34 000 руб.</span>
+                    <span class="card-price__price">34 000 руб.</span>
                 </div>
             </article>
             <article class="card">
@@ -125,7 +130,7 @@
                 <h3 class="card__name">Кресло ASKESTA</h3>
                 <p class="card__description">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки</p>
                 <div class="card-price">
-                    <span class="price">68 000 руб.</span>
+                    <span class="card-price__price">68 000 руб.</span>
                 </div>
             </article>
             <article class="card">
@@ -133,7 +138,7 @@
                 <h3 class="card__name">Стол NORMAN</h3>
                 <p class="card__description">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки</p>
                 <div class="card-price">
-                    <span class="price">40 000 руб.</span>
+                    <span class="card-price__price">40 000 руб.</span>
                 </div>
             </article>
             <article class="card">
@@ -141,7 +146,7 @@
                 <h3 class="card__name">Диван NASTAN</h3>
                 <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора. </p>
                 <div class="card-price">
-                    <span class="price">80 000 руб.</span>
+                    <span class="card-price__price">80 000 руб.</span>
                 </div>
             </article>
         </div>
@@ -153,17 +158,13 @@
     <footer class="footer center">
         <img class="footer__logo" src="./img/Интерьер..svg" alt="Логотип">
         <div class="footer__menu">
-            <h4 class="footer__title">Меню</h4>
-            <nav>
-                <ul class="ulist">
-                    <li><a class="footer__link link" href="./index.html">Главная</a></li>
-                    <li><a class="footer__link link" href="./catalog.html">Каталог</a></li>
-                    <li><a class="footer__link link" href="#">Корзина</a></li>
-                </ul>
-            </nav>
+            <span><h4 class="footer__title">Меню</h4></span>
+            <a class="footer__link link" href="./index.html">Главная</a>
+            <a class="footer__link link" href="./catalog.html">Каталог</a>
+            <a class="footer__link link" href="#">Корзина</a>
         </div>
         <div class="footer__contacts">
-            <h4 class="footer__title">Контакты</h4>
+            <span class="footer__title">Контакты</span>
             <a class="footer__link link" href="tel:+79088008080">+7 908 800 80 80</a>
             <a class="footer__link link" href="mailto:help@interier.com">help@interier.com</a>
             <div class="social-logo">
@@ -173,7 +174,7 @@
             </div>
         </div>
         <div class="footer__subscribe">
-            <p class="footer__text">Получайте наши новости и обновления</p>
+            <span><p class="footer__text">Получайте наши новости и обновления</p></span>
             <form class="form" action="#">
                 <input class="form__input font" type="email" placeholder="Ваш e-mail">
                 <button class="form__button font" type="submit">Подписаться</button>
