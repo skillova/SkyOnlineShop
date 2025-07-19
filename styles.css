@@ -135,7 +135,6 @@ body {
 }
 
 .card-grid {
-    width: 378px;
     grid-column: span 4;
     position: relative;
 }
