@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./drop_filter.css">
 </head>
 
 <body>
@@ -36,16 +37,160 @@
         <div class="catalog-filter">
             <select class="drop-list drop-list-filter drop-list-text">
                 <option value="" class="drop-list-text">Фильтрация</option>
-                <option value="relax">Для отдыха</option>
-                <option value="job">Для работы</option>
-                <option value="kitchen">Для кухни</option>
-                <option value="kids">Для детской</optio>
-                <option value="bathroom">Для ванной</optio>
             </select>
             <select class="drop-list drop-list_sort drop-list-text">
                 <option value="" class="drop-list-text">По популярности</option>
                 <option value="new">сперва новые</option>
             </select>
+            <form action="#" class="filter-content-drop">
+                <div class="filter-block">
+                    <fieldset class="fieldset">
+                        <legend class="fieldset__legend">Сроки доставки</legend>
+                        <div>
+                            <input type="radio" id="any" name="delivery">
+                            <label for="any">Неважно</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="today" name="delivery">
+                            <label for="today">Сегодня</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="tomorrow" name="delivery">
+                            <label for="tomorrow">Завтра</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="3_days" name="delivery">
+                            <label for="3_days">До трех дней</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="7_days" name="delivery">
+                            <label for="7_days">До семи дней</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset__legend">Цена</legend>
+                        <p class="fieldset__p">on 0 руб. до 100000 руб.</p>
+                        <div class="range-wrapper">
+                            <input type="range" id="price-min" name="price-min" min="0" max="100000" step="100"
+                                value="0">
+                            <input type="range" id="price-max" name="price-max" min="0" max="100000" step="100"
+                                value="100000">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset fieldset-row">
+                        <legend class="fieldset__legend">Цвет</legend>
+                        <div>
+                            <input type="checkbox" id="color-white" name="color-white">
+                            <label for="color-white"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-black" name="color-black">
+                            <label for="color-black"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-grey" name="color-grey">
+                            <label for="color-grey"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-red" name="color-red">
+                            <label for="color-red"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-orange" name="color-orange">
+                            <label for="color-orange"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-yelow" name="color-yelow">
+                            <label for="color-yelow"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-green" name="color-green">
+                            <label for="color-green"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-ltgreen" name="color-ltgreen">
+                            <label for="color-ltgreen"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-ltblue" name="color-ltblue">
+                            <label for="color-ltblue"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-blue" name="color-blue">
+                            <label for="color-blue"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-violet" name="color-violet">
+                            <label for="color-violet"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-purple" name="color-purple">
+                            <label for="color-purple"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-lilac" name="color-lilac">
+                            <label for="color-lilac"></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="color-pink" name="color-pink">
+                            <label for="color-pink"></label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="filter-menu filter-menu_right">
+                    <fieldset class="fieldset">
+                        <legend class="fieldset__legend">Тип комнаты</legend>
+                        <div>
+                            <input type="checkbox" id="kitchen" name="kitchen">
+                            <label for="kitchen">кухня и столовая</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="bathroom" name="bathroom">
+                            <label for="bathroom">ванная комната</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="kidsroom" name="kidsroom">
+                            <label for="kidsroom">детская комната</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="homeoffice" name="homeoffice">
+                            <label for="homeoffice">домашний офис</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="livingroom" name="livingroom">
+                            <label for="livingroom">гостиная</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="hallway" name="hallway">
+                            <label for="hallway">прихожая</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="bedroom" name="bedroom">
+                            <label for="bedroom">спальня</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkroom" name="checkroom">
+                            <label for="checkroom">гардероб</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="dacha" name="dacha">
+                            <label for="dacha">дача</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="illumination" name="illumination">
+                            <label for="illumination">освещение</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="filter-controls">
+                    <button type="submit" class="buttom_submit">Применить</button>
+                </div>
+
+            </form>
         </div>
     </div>
 
@@ -166,7 +311,9 @@
     <footer class="footer center">
         <img src="./img/Интерьер..svg" alt="Логотип">
         <div class="footer__menu">
-            <span><h4 class="footer__title">Меню</h4></span>
+            <span>
+                <h4 class="footer__title">Меню</h4>
+            </span>
             <a class="footer__link link" href="./index.html">Главная</a>
             <a class="footer__link link" href="./catalog.html">Каталог</a>
             <a class="footer__link link" href="#">Корзина</a>
