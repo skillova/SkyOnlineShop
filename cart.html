@@ -8,169 +8,167 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
 
-    <header class="header header-cart center">
-        <div class="header__menu">
-            <img class="logo" src="./img/logo.svg" alt="Логотип">
-            <input class="header__search" type="text" placeholder="Поиск">
-            <ul class="u-list">
-                <li><a class="u-list__link" href="./catalog.html">Каталог</a></li>
-                <li><a class="u-list__link" href="./cart.html">Корзина</a></li>
+    <header class="header header_cart center">
+        <div class="header-nav-bar">
+            <img class="logo" src="./media/logo/logo.svg" alt="Логотип">
+            <input class="header-input" type="text" placeholder="Поиск">
+            <ul class="header-nav-list">
+                <li><a class="header-nav-list__link" href="./catalog.html">Каталог</a></li>
+                <li><a class="header-nav-list__link" href="./cart.html">Корзина</a></li>
             </ul>
         </div>
-        <div class="title">
-            <span class="title__header title__header-cart">Корзина</span>
-        </div>
+        <section class="content-header content-header_ctg">
+            <h1 class="content-header__title title__name_ctg">Корзина</h1>
+        </section>
     </header>
 
-    <div class="cart-box center">
-        <div class="cart-box__top">
-            <span>Товар</span>
-            <span>К-во</span>
-        </div>
-        <div class="cart-box__items">
-            <article class="item-simple">
-                <div class="item-content">
-                    <div class="item-img">
-                        <img class="item-img__for-cart" src="./img/Card_1.jpeg" alt="Стол MENU">
-                    </div>
-                    <div class="item-about">
-                        <div class="item-property">
-                            <p class="item-property__title">Стол MENU</p>
-                            <p class="item-property__description">Для того чтобы трапезничать было приятно,
-                                необходим
-                                правильный
+
+    <div class="content center">
+        <div class="grid">
+            <span class="poz-grid-head poz-grid-head-items">Товар</span>
+            <span class="poz-grid-head poz-grid-head-count">К-во</span>
+            <div class="poz-grid-cards">
+                <article class="card card-row">
+                    <div class="row">
+                        <div>
+                            <img class="card__img-row" src="./media/product/MENU.jpeg" alt="Стол MENU">
+                        </div>
+                        <div>
+                            <h3 class="card__title">Стол MENU</h3>
+                            <p class="card__description card__description_cart">Для того чтобы трапезничать было
+                                приятно,
+                                необходим правильный
                                 обеденный
                                 стол.
                             </p>
+                            <div class="row">
+                                <span class="card__price">34 000 руб.</span>
+                            </div>
+                            <div class="flex flex-row">
+                                <a class="card__link" href="">Избранные</a>
+                                <a class="card__link" href="">Удалить</a>
+                            </div>
                         </div>
-                        <div class="item-price">
-                            <span class="item-price__price">34 000 руб.</span>
-                        </div>
-                        <div class="item-link">
-                            <a class="item-link__for-cart" href="#">Избранные</a>
-                            <a class="item-link__for-cart" href="#">Удалить</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-counter">
-                    <input class="item-counter__cart" type="number" min="1" value="1">
-                </div>
-            </article>
-            <article class="item-simple">
-                <div class="item-content">
-                    <div class="item-img">
-                        <img class="item-img__for-cart" src="./img/Card_2.jpeg" alt="Стол MENU">
                     </div>
                     <div>
-                        <div class="item-property">
-                            <p class="item-property__title">Стол MENU</p>
-                            <p class="item-property__description">Для того чтобы трапезничать было приятно,
-                                необходим
-                                правильный
-                                обеденный
-                                стол.
+                        <input class="card__counter" type="number" min="1" value="1">
+                    </div>
+                </article>
+                <article class="card card-row">
+                    <div class="row">
+                        <div>
+                            <img class="card__img-row" src="./media/product/NASTAN.jpeg" alt="Диван NASTAN">
+                        </div>
+                        <div>
+                            <h3 class="card__title">Диван NASTAN</h3>
+                            <p class="card__description card__description_cart">Модель отличается простотой линий и
+                                форм,
+                                отсутствием броского декора.
                             </p>
-                        </div>
-                        <div class="item-price">
-                            <span class="item-price__price">34 000 руб.</span>
-                        </div>
-                        <div class="item-link">
-                            <a class="item-link__for-cart" href="#">Избранные</a>
-                            <a class="item-link__for-cart" href="#">Удалить</a>
+                            <div class="row">
+                                <span class="card__price">80 000 руб.</span>
+                            </div>
+                            <div class="flex flex-row">
+                                <a class="card__link" href="">Избранные</a>
+                                <a class="card__link" href="">Удалить</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item-counter">
-                    <input class="item-counter__cart" type="number" min="1" value="1">
-                </div>
-            </article>
-            <div class="button">
-                <button class="button__action" type="button">Оформить заказ</button>
-                <button class="button__action" type="button">Оформить заказ</button>
+                    <div>
+                        <input class="card__counter" type="number" min="1" value="1">
+                    </div>
+                </article>
             </div>
-        </div>
-        <div class="cart-box__form">
-            <form class="cart-form" action="#">
-                <span class="cart-form__title">Оформление заказа</span>
-                <div class="cart-form-customer">
-                    <input class="cart-form-customer__person" type="text" placeholder="Имя Фамилия">
-                    <input class="cart-form-customer__phone" type="tel" placeholder="+ 7 904 000 80 80">
-                    <input class="cart-form-customer__address" type="text" placeholder="Адрес доставки">
+            <form class="form-payment poz-grid-payment" action="#">
+                <span class="form-payment__title">Оформление заказа</span>
+                <div class="form-payment__contact-box">
+                    <input class="form-payment__person" type="text" placeholder="Имя Фамилия">
+                    <input class="form-payment__phone" type="tel" placeholder="+ 7 904 000 80 80">
+                    <input class="form-payment__address" type="text" placeholder="Адрес доставки">
                 </div>
-                <span class="cart-form__total-price">Итого: 128 000 руб.</span>
-                <button class="cart-form__button" type="submit">Оформить заказ</button>
+                <span class="form-payment__price-total">Итого: 128 000 руб.</span>
+                <button class="form-payment__button" type="submit">Оформить заказ</button>
             </form>
         </div>
+        <div class="button">
+            <button class="button button__action" type="button">Очистить корзину</button>
+            <button class="button button__action" type="button">Продолжить покупки</button>
+        </div>
+
+
     </div>
 
-    <section class="content-discount center">
-        <h2 class="content-title">Специальные предложения</h2>
-        <div class="box-flex">
-            <article class="card">
-                <img src="./img/Rectangle 11.jpeg" alt="Люстра VODA">
-                <h3 class="card__name">Люстра VODA</h3>
+    <section class="content center">
+        <h2 class="content__title">Специальные предложения</h2>
+        <div class="row">
+            <article class="card card-col">
+                <img class="card__img-col" src="./media/product/VODA.jpeg" alt="Люстра VODA">
+                <h3 class="card__title">Люстра VODA</h3>
                 <p class="card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий
                     эффект.</p>
-                <div class="card-price">
-                    <span class="card-price__price">45 000 руб.</span>
-                    <span class="card-price__price card-price__price_sale">67 000 руб.</span>
+                <div class="row">
+                    <span class="card__price">45 000 руб.</span>
+                    <span class="card__price card__price_sale">67 000 руб.</span>
                 </div>
             </article>
-            <article class="card">
-                <img src="./img/Rectangle 12.jpeg" alt="Диван RONALD">
-                <h3 class="card__name">Диван RONALD</h3>
+            <article class="card card-col">
+                <img class="card__img-col" src="./media/product/RONALD.jpeg" alt="Диван RONALD">
+                <h3 class="card__title">Диван RONALD</h3>
                 <p class="card__description">Модель отличается простотой линий и форм, отсутствием броского декора.</p>
-                <div class="card-price">
-                    <span class="card-price__price">156 000 руб.</span>
-                    <span class="card-price__price card-price__price_sale">198 000 руб.</span>
+                <div class="row">
+                    <span class="card__price">156 000 руб.</span>
+                    <span class="card__price card__price_sale">198 000 руб.</span>
                 </div>
             </article>
-            <article class="card">
-                <img src="./img/Rectangle 13.jpeg" alt="Комод VENT">
-                <h3 class="card__name">Комод VENT</h3>
+            <article class="card card-col">
+                <img class="card__img-col" src="./media/product/VENT.jpeg" alt="Комод VENT">
+                <h3 class="card__title">Комод VENT</h3>
                 <p class="card__description">Европейский дуб - отличается особой прочностью и стабильностью.</p>
-                <div class="card-price">
-                    <span class="card-price__price">34 000 руб.</span>
-                    <span class="card-price__price card-price__price_sale">45 000 руб.</span>
+                <div class="row">
+                    <span class="card__price">34 000 руб.</span>
+                    <span class="card__price card__price_sale">45 000 руб.</span>
                 </div>
             </article>
+        </div>
+        <div class="content-link">
+            <a class="content-link" href="catalog.html">Перейти в каталог</a>
         </div>
     </section>
 
 
 
     <footer class="footer center">
-        <img class="footer__logo" src="./img/Интерьер..svg" alt="Логотип">
-        <div class="footer__menu">
-            <span>
-                <h4 class="footer__title">Меню</h4>
-            </span>
-            <a class="footer__link link" href="./index.html">Главная</a>
-            <a class="footer__link link" href="./catalog.html">Каталог</a>
-            <a class="footer__link link" href="#">Корзина</a>
+        <img src="./media/logo/Интерьер..svg" alt="Логотип">
+        <div class="footer-nav-bar">
+            <span class="footer-nav-bar__title-nav">Меню</span>
+            <ul class="footer-nav-list">
+                <li><a class="footer-nav-list__link" href="./catalog.html">Главная</a></li>
+                <li><a class="footer-nav-list__link" href="./catalog.html">Каталог</a></li>
+                <li><a class="footer-nav-list__link" href="./cart.html">Корзина</a></li>
+            </ul>
         </div>
-        <div class="footer__contacts">
-            <span class="footer__title">Контакты</span>
-            <a class="footer__link link" href="tel:+79088008080">+7 908 800 80 80</a>
-            <a class="footer__link link" href="mailto:help@interier.com">help@interier.com</a>
-            <div class="social-logo">
-                <img class="social-logo__img" src="./img/vk.svg" alt="Логотип ВК">
-                <img class="social-logo__img" src="./img/telegram.svg" alt="Логотип Телеграмм">
-                <img class="social-logo__img" src="./img/dzen.svg" alt="Логотип Дзен">
+        <div class="footer-nav-bar">
+            <span class="footer-nav-bar__title-nav">Контакты</span>
+            <ul class="footer-nav-list">
+                <li><a class="footer-nav-list__link" href="tel:+79088008080">+7 908 800 80 80</a></li>
+                <li><a class="footer-nav-list__link" href="mailto:help@interier.com">help@interier.com</a></li>
+            </ul>
+            <div class="footer-social-logo">
+                <img class="footer-social-logo__img" src="./media/logo/vk.svg" alt="Логотип ВК">
+                <img class="footer-social-logo__img" src="./media/logo/telegram.svg" alt="Логотип Телеграмм">
+                <img class="footer-social-logo__img" src="./media/logo/dzen.svg" alt="Логотип Дзен">
             </div>
         </div>
-        <div class="footer__subscribe">
-            <span>
-                <p class="footer__text">Получайте наши новости и обновления</p>
-            </span>
-            <form class="form" action="#">
-                <input class="form__input font" type="email" placeholder="Ваш e-mail">
-                <button class="form__button font" type="submit">Подписаться</button>
+        <div class="footer-subscribe">
+            <span class="footer-subscribe__text-info">Получайте наши новости и обновления</span>
+            <form class="footer-form" action="#">
+                <input class="footer-form__input font" type="email" placeholder="Ваш e-mail">
+                <button class="footer-form__button font" type="submit">Подписаться</button>
             </form>
         </div>
     </footer>

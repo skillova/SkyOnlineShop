@@ -1,0 +1,257 @@
+@import "content";
+@import "drop_filter";
+
+$color-input: #FFFFFF;
+$color-border: #CACDD8;
+$color-title: #000000;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Центрирование контента расчетными отступами */
+.center {
+    box-sizing: border-box;
+    padding: 0 calc((100% - 1200px) / 2);
+}
+
+/* header общие настройки */
+.header {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+
+    /* header главная страница */
+    &_index {
+        height: 735px;
+        background-image: url(../../media/img/index_header.jpeg);
+        margin-bottom: 64px;
+    }
+
+    &_catalog {
+        height: 400px;
+        background-image: url(../../media/img/category_header.jpeg);
+        margin-bottom: 61px;
+    }
+
+    &_cart {
+        height: 400px;
+        background-image: url(../../media/img/cart_header.jpeg);
+        margin-bottom: 64px;
+    }
+}
+
+/* Навигационное меню в <header> */
+.header-nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 0.5px solid #FFFFFFCC;
+}
+
+/* Поле ввода данных в меню <header> */
+.header-input {
+    width: 288px;
+    height: 41px;
+    font-size: 16px;
+    text-indent: 32px;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    background: #FFFFFF;
+    background: transparent;
+
+    /* Псевдоэлемент ::placeholder для стилизации текста-подсказки (плейсхолдера) в полях ввода форм. 
+    Позволяет настраивать внешний вид текста, который отображается до ввода данных пользователем. */
+    &::placeholder {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0%;
+    }
+}
+
+/* маркированный список в навигационном меню <header><nav-bar> */
+.header-nav-list {
+    display: flex;
+    gap: 32px;
+    list-style-type: none;
+
+    /* ссылки общие стили */
+    &__link {
+        font-size: 16px;
+        color: #FFFFFF;
+        line-height: 20px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+
+        /* Псевдокласс :hover применяется к элементам при наведении на них курсора мыши. 
+        Используется для создания интерактивных эффектов на веб-страницах. */
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.content {
+
+    /* Стили flex контента <header> */
+    &-header {
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+
+        &_ctg {
+            margin-top: 127px;
+        }
+
+        /* Заголовок контента в <header> */
+        &__title {
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 70px;
+            margin-bottom: 16px;
+            max-width: 755px;
+            color: #FFFFFF
+        }
+
+        /* Описание контента в <header> */
+        &__description {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 16px;
+            color: #FFFFFF
+        }
+
+        /* модификор ссылки в контенте <header> */
+        &__link {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-decoration-line: underline;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 32px;
+    padding-bottom: 17px;
+    background-color: #F7F6F6;
+}
+
+.footer-nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__title-nav {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        color: #000000;
+    }
+}
+
+
+.footer-nav-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 12px;
+
+    .footer-nav-list__link {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        color: #888888;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-social-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    &__img {
+        width: 19px;
+        height: 18px;
+    }
+}
+
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__text-info {
+        font-size: 12px;
+        line-height: 15px;
+        text-align: left;
+        color: #000000;
+    }
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__input {
+        padding-left: 14px;
+        width: 260px;
+        height: 40px;
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 18px;
+        color: #c4c4c4;
+        background: #ffffff;
+        border: 1px solid #c4c4c4;
+        box-sizing: border-box;
+        border-radius: 20px;
+
+        &::placeholder {
+            color: rgb(196, 196, 196);
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+
+    &__button {
+        font-size: 12px;
+        line-height: 18px;
+        color: #000000;
+        background: rgba(222, 215, 215, 0.41);
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 260px;
+        height: 46px;
+    }
+}

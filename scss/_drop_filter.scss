@@ -92,7 +92,7 @@ input[type="radio"]:checked+label::after {
     top: 0;
     width: 15px;
     height: 15px;
-    background-image: url("./img/V.png");
+    background-image: url("../../media/sprite/V.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -159,7 +159,7 @@ input[type="checkbox"]:checked+label::after {
     width: 15px;
     height: 15px;
     border: 1px solid #000000;
-    background-image: url("./img/V.png");
+    background-image: url("../../media/sprite/V.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
