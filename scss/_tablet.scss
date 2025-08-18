@@ -1,0 +1,38 @@
+@media (max-width: 1024px) {
+    .center {
+        padding: 0 calc((100% - 786px) / 2);
+    }
+
+    .row {
+        column-gap: 29px;
+        row-gap: 39px;
+    }
+
+    .card {
+        &-grid {
+            &__img {
+                height: 268px;
+            }
+        }
+    }
+
+    .footer {
+        &__logo {
+            display: none;
+        }
+    }
+
+    .grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .filter-content-drop {
+        left: -124px;
+    }
+}
+
+@media (max-width: 833px) {
+    .center {
+        padding: 0 24px;
+    }
+}
