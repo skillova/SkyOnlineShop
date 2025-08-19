@@ -42,62 +42,66 @@ body {
         background-image: url(../../media/img/cart_header.jpeg);
         margin-bottom: 64px;
     }
-}
 
-/* Навигационное меню в <header> */
-.header-nav-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border-bottom: 0.5px solid #FFFFFFCC;
-}
-
-/* Поле ввода данных в меню <header> */
-.header-input {
-    width: 288px;
-    height: 41px;
-    font-size: 16px;
-    text-indent: 32px;
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 20px;
-    background: #FFFFFF;
-    background: transparent;
-
-    /* Псевдоэлемент ::placeholder для стилизации текста-подсказки (плейсхолдера) в полях ввода форм. 
-    Позволяет настраивать внешний вид текста, который отображается до ввода данных пользователем. */
-    &::placeholder {
-        color: #FFFFFF;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0%;
-    }
-}
-
-/* маркированный список в навигационном меню <header><nav-bar> */
-.header-nav-list {
-    display: flex;
-    gap: 32px;
-    list-style-type: none;
-
-    /* ссылки общие стили */
-    &__link {
-        font-size: 16px;
-        color: #FFFFFF;
-        line-height: 20px;
-        text-decoration: none;
+    /* Навигационное меню в <header> */
+    &-nav-bar {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 0.5px solid #FFFFFFCC;
 
-        /* Псевдокласс :hover применяется к элементам при наведении на них курсора мыши. 
+        &-mobile {
+            display: none;
+        }
+    }
+
+    /* Поле ввода данных в меню <header> */
+    &-input {
+        width: 288px;
+        height: 41px;
+        font-size: 16px;
+        text-indent: 32px;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        border-radius: 20px;
+        background: #FFFFFF;
+        background: transparent;
+
+        /* Псевдоэлемент ::placeholder для стилизации текста-подсказки (плейсхолдера) в полях ввода форм. 
+    Позволяет настраивать внешний вид текста, который отображается до ввода данных пользователем. */
+        &::placeholder {
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0%;
+        }
+    }
+
+    /* маркированный список в навигационном меню <header><nav-bar> */
+    &-nav-list {
+        display: flex;
+        gap: 32px;
+        list-style-type: none;
+
+        /* ссылки общие стили */
+        &__link {
+            font-size: 16px;
+            color: #FFFFFF;
+            line-height: 20px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+
+            /* Псевдокласс :hover применяется к элементам при наведении на них курсора мыши. 
         Используется для создания интерактивных эффектов на веб-страницах. */
-        &:hover {
-            text-decoration: underline;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -261,3 +265,4 @@ body {
 @import "content";
 @import "drop_filter";
 @import "tablet";
+@import "mobile";

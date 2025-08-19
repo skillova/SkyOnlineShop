@@ -1,7 +1,6 @@
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
     margin-bottom: 64px;
 
@@ -71,7 +70,9 @@
         width: auto;
 
         &__img {
-            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         &_big {
