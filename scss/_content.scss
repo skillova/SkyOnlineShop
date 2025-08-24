@@ -1,10 +1,12 @@
 .content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 32px;
     margin-bottom: 64px;
 
     &__title {
+        grid-column: 1 / -1;
         font-size: 48px;
         font-weight: 600;
         line-height: 59px;
@@ -13,91 +15,41 @@
     }
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 32px;
-}
-
-.grid-for {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 32px;
-}
-
-.flex {
+.col {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
-    &-col {
-        flex-direction: column;
+    &-xl {
+        grid-column: span 6;
     }
 }
 
 .row {
     display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    flex-direction: row;
     column-gap: 32px;
-    row-gap: 48px;
+    row-gap: 32px;
 }
 
+.card,
+.card-for {
+    position: relative;
+    grid-column: span 4;
 
-.card {
-    display: flex;
-
-    &-col {
-        flex-direction: column;
-        width: 378px;
-    }
-
-    &-row {
-        flex-direction: row;
-        justify-content: space-between;
-        border-top: 0.5px solid rgba(202, 205, 216, 1);
-        padding-top: 25px;
-        margin-bottom: 32px;
-
-        &:last-child {
-            margin-bottom: 50px;
-        }
-    }
-
-    &-grid {
-        grid-column: span 4;
-        position: relative;
-        width: auto;
-
-        &__img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        &_big {
-            grid-column: span 6;
-        }
-    }
-
-    &__img-col {
-        margin-bottom: 10px;
-    }
-
-    &__img-row {
-        display: block;
-        width: 173px;
-        height: 173px;
-        object-fit: cover;
-        overflow: hidden;
+    &_big {
+        grid-column: span 6;
     }
 
     &__title {
+        max-width: 379px;
         font-size: 24px;
         font-weight: 500;
         line-height: 100%;
         color: #000000;
         margin-bottom: 9px;
+
+        &_cart {
+            margin-bottom: 14px;
+        }
 
         &_center {
             position: absolute;
@@ -111,7 +63,8 @@
         }
     }
 
-    &__description {
+    &__text {
+        max-width: 379px;
         font-size: 14px;
         font-weight: 400;
         line-height: 100%;
@@ -119,12 +72,13 @@
         margin-bottom: 12px;
 
         &_cart {
+            max-width: 276px;
             margin-bottom: 16px;
-            width: 276px;
         }
     }
 
     &__price {
+        max-width: 379px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -132,6 +86,10 @@
         font-weight: 500;
         line-height: 29px;
         color: #050505;
+
+        &_cart {
+            margin-bottom: 15px;
+        }
 
         &_sale {
             text-decoration-line: line-through;
@@ -144,13 +102,32 @@
         }
     }
 
-    &__link {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 210%;
-        color: #000000;
-        margin-top: 15px;
+    &_cart {
+        grid-column: span 8;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-top: 0.5px solid rgba(202, 205, 216, 1);
+        padding-top: 25px;
+        margin-bottom: 32px;
 
+        &:last-child {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        & a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 210%;
+            color: #000000;
+            margin-top: 15px;
+        }
     }
 
     &__counter {
@@ -164,14 +141,16 @@
         background: rgb(247, 246, 246);
         border: none
     }
+
 }
+
 
 .content-link {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     color: #000000;
-    padding-top: 42px;
+    margin-bottom: 64px;
 }
 
 .catalog-menu {
@@ -194,73 +173,19 @@
     }
 }
 
-.catalog-filter {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.drop-list {
-    width: 182px;
-    height: 40px;
-    border: 1px solid rgb(196, 196, 196);
-    border-radius: 20px;
-    appearance: none;
-    background: url(../../media/sprite/arrow_down.svg) no-repeat right 22px center;
-
-    &_filter {
-        width: 182px;
-    }
-
-    &_sort {
-        width: 227px;
-    }
-
-    &_text {
-        color: rgb(0, 0, 0);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 20px;
-        padding: 9px 54px 11px 23px;
-    }
-}
-
-.poz-grid {
-
-    &-head {
-        margin-bottom: 14px;
-
-        &-items {
-            grid-column: 1;
-        }
-
-        &-count {
-            grid-column: 8;
-        }
-    }
-
-    &-cards {
-        grid-column: 1 / span 8;
-    }
-
-    &-payment {
-        grid-column: span 4;
-        // grid-column: 9 / span 4;
-        // grid-row: 1 / span 2;
-        // grid-column-start: 9;
-        // grid-row-start: 1;
-    }
-}
-
-
-.form-payment {
+.form-pay {
+    grid-column: span 4;
     border-radius: 20px;
     background: #f7f6f6;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 42px;
+    padding-bottom: 142px;
+
+    &__img {
+        display: block;
+    }
 
     &__title {
         display: flex;
@@ -268,32 +193,27 @@
         font-size: 24px;
         font-weight: 700;
         color: rgb(0, 0, 0);
-        padding-top: 42px;
         margin-bottom: 35px;
     }
 
-    &__contact-box {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding-left: 27px;
-        align-items: start;
-        gap: 44px;
-        margin-bottom: 64.5px;
-    }
-
-    &__person,
-    &__phone,
-    &__address {
+    &__contact input {
+        width: 288px;
         font-size: 14px;
         font-weight: 400;
         font-family: inherit;
-        line-height: 17px;
-        max-width: 288px;
-        color: #000000;
+        line-height: 100%;
+        color: rgb(0, 0, 0);
         background: transparent;
         border: none;
         border-bottom: 1px solid #CACDD8;
+        padding-bottom: 2.5px;
+        margin-left: 27px;
+        margin-right: 64px;
+        margin-bottom: 44px;
+
+        &:last-of-type {
+            margin-bottom: 64.5px;
+        }
     }
 
     &__price-total {
@@ -306,40 +226,61 @@
         margin-bottom: 18px;
     }
 
-    &__button {
+    &-btn {
         display: flex;
-        width: 290px;
-        height: 41px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 100%;
-        font-family: inherit;
-        border: 1px solid #040404;
-        border-radius: 20px;
         justify-content: center;
-        align-items: center;
+
+        &__submit {
+            display: flex;
+            width: 290px;
+            height: 41px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 100%;
+            font-family: inherit;
+            border: 1px solid #040404;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
 
+.cart {
+    grid-column: span 8;
 
-.button {
-    display: flex;
-    flex-direction: row;
-    gap: 7px;
-
-    &__action {
+    &__header {
         display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-        width: 200px;
-        height: 37px;
-        font-size: 14px;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 16px;
         font-weight: 400;
-        line-height: 17px;
-        font-family: inherit;
-        box-sizing: border-box;
-        border: 1px solid #020202;
-        border-radius: 50px;
+        line-height: 100%;
+        color: rgb(0, 0, 0);
+        margin-bottom: 14px;
+    }
+
+    &__btn {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 7px;
+
+        & button {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: 200px;
+            height: 37px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            font-family: inherit;
+            box-sizing: border-box;
+            border: 1px solid #020202;
+            border-radius: 50px;
+        }
     }
 }

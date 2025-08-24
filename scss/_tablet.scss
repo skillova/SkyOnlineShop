@@ -1,38 +1,38 @@
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .center {
         padding: 0 calc((100% - 786px) / 2);
     }
 
-    .row {
-        column-gap: 29px;
-        row-gap: 39px;
+    .card {
+        grid-column: span 6;
+
+        &-for {
+            &__img {
+                height: 268px;
+            }
+        }
     }
 
-    // .card {
-    //     &-grid {
-    //         &__img {
-    //             height: 268px;
-    //         }
-    //     }
-    // }
+    .filter-content-drop {
+        top: 54px;
+        left: -124px;
+
+    }
 
     .footer {
+        padding-top: 32px;
+        padding-bottom: 63px;
+
         &__logo {
             display: none;
         }
     }
 
-    .grid {
-        grid-template-columns: repeat(8, 1fr);
+    .cart {
+        grid-column: span 12;
     }
 
-    .filter-content-drop {
-        left: -124px;
-    }
-}
-
-@media (max-width: 833px) {
-    .center {
-        padding: 0 24px;
+    .form-pay {
+        grid-column: span 6;
     }
 }

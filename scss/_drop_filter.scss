@@ -11,6 +11,39 @@ body {
     line-height: 17px;
 }
 
+.catalog-filter {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.drop-list {
+    width: 182px;
+    height: 40px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 20px;
+    appearance: none;
+    background: url(../../media/sprite/arrow_down.svg) no-repeat right 22px center;
+
+    &_filter {
+        width: 182px;
+    }
+
+    &_sort {
+        width: 227px;
+    }
+
+    &_text {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 9px 54px 11px 23px;
+    }
+}
+
 .filter-content-drop {
     position: absolute;
     top: 54px;

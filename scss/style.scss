@@ -13,7 +13,6 @@ body {
 
 /* Центрирование контента расчетными отступами */
 .center {
-    box-sizing: border-box;
     padding: 0 calc((100% - 1200px) / 2);
 }
 
@@ -154,8 +153,8 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 32px;
-    padding-bottom: 17px;
-    background-color: #F7F6F6;
+    padding-bottom: 63px;
+    background-color: rgb(247, 246, 246);
 
     &__logo {
         display: block;
