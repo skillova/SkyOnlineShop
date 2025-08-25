@@ -150,8 +150,9 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
+    gap: 70px;
     padding-top: 32px;
     padding-bottom: 63px;
     background-color: rgb(247, 246, 246);
