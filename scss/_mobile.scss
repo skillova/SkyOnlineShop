@@ -113,12 +113,17 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 495px) {
     .card {
+        grid-column: 1 / -1;
         &__img {
             &_none {
                 display: none;
             }
         }
+    }
+
+    .form-pay form {
+        max-width: 300px;
     }
 }

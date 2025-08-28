@@ -35,6 +35,10 @@
     position: relative;
     grid-column: span 4;
 
+    &__img {
+        object-fit: contain;
+    }
+
     &_big {
         grid-column: span 6;
     }
@@ -259,6 +263,10 @@
         line-height: 100%;
         color: rgb(0, 0, 0);
         margin-bottom: 14px;
+
+        & span {
+            padding-right: 27px;
+        }
     }
 
     &__btn {

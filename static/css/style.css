@@ -401,6 +401,11 @@ body {
   position: relative;
   grid-column: span 4;
 }
+.card__img,
+.card-for__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .card_big,
 .card-for_big {
   grid-column: span 6;
@@ -679,6 +684,9 @@ body {
   line-height: 100%;
   color: rgb(0, 0, 0);
   margin-bottom: 14px;
+}
+.cart__header span {
+  padding-right: 27px;
 }
 .cart__btn {
   grid-column: 1/-1;
@@ -1034,7 +1042,7 @@ input[type=checkbox]:checked + label::after {
   border-radius: 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .center {
     padding: 0 calc((100% - 786px) / 2);
   }
@@ -1161,8 +1169,14 @@ input[type=checkbox]:checked + label::after {
             justify-content: center;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 495px) {
+  .card {
+    grid-column: 1/-1;
+  }
   .card__img_none {
     display: none;
+  }
+  .form-pay form {
+    max-width: 300px;
   }
 }/*# sourceMappingURL=style.css.map */
