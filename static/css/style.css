@@ -140,6 +140,13 @@ body {
 }
 .header-nav-list__link:hover {
   text-decoration: underline;
+  -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+}
+.header-nav-list__link:hover:hover {
+  color: chocolate;
 }
 
 .content {
@@ -181,6 +188,13 @@ body {
   line-height: 24px;
   text-decoration-line: underline;
   color: #FFFFFF;
+  -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+}
+.content-header__link:hover {
+  color: chocolate;
 }
 
 .footer {
@@ -242,6 +256,13 @@ body {
 }
 .footer-nav-list .footer-nav-list__link:hover {
   text-decoration: underline;
+  -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+}
+.footer-nav-list .footer-nav-list__link:hover:hover {
+  color: chocolate;
 }
 .footer-social-logo {
   display: -webkit-box;
@@ -396,22 +417,18 @@ body {
   row-gap: 32px;
 }
 
-.card,
-.card-for {
+.card {
   position: relative;
   grid-column: span 4;
 }
-.card__img,
-.card-for__img {
+.card__img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.card_big,
-.card-for_big {
+.card_big {
   grid-column: span 6;
 }
-.card__title,
-.card-for__title {
+.card__title {
   max-width: 379px;
   font-size: 24px;
   font-weight: 500;
@@ -419,12 +436,10 @@ body {
   color: #000000;
   margin-bottom: 9px;
 }
-.card__title_cart,
-.card-for__title_cart {
+.card__title_cart {
   margin-bottom: 14px;
 }
-.card__title_center,
-.card-for__title_center {
+.card__title_center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -436,8 +451,7 @@ body {
   line-height: 41px;
   color: #FFFFFF;
 }
-.card__text,
-.card-for__text {
+.card__text {
   max-width: 379px;
   font-size: 14px;
   font-weight: 400;
@@ -445,13 +459,11 @@ body {
   color: #888888;
   margin-bottom: 12px;
 }
-.card__text_cart,
-.card-for__text_cart {
+.card__text_cart {
   max-width: 276px;
   margin-bottom: 16px;
 }
-.card__price,
-.card-for__price {
+.card__price {
   max-width: 379px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,22 +479,18 @@ body {
   line-height: 29px;
   color: #050505;
 }
-.card__price_cart,
-.card-for__price_cart {
+.card__price_cart {
   margin-bottom: 15px;
 }
-.card__price_sale,
-.card-for__price_sale {
+.card__price_sale {
   text-decoration-line: line-through;
   color: #888888;
 }
-.card__price_cart,
-.card-for__price_cart {
+.card__price_cart {
   font-size: 16px;
   line-height: 20px;
 }
-.card_cart,
-.card-for_cart {
+.card_cart {
   grid-column: span 8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -498,12 +506,10 @@ body {
   padding-top: 25px;
   margin-bottom: 32px;
 }
-.card_cart:last-child,
-.card-for_cart:last-child {
+.card_cart:last-child {
   margin-bottom: 50px;
 }
-.card__link,
-.card-for__link {
+.card__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,16 +519,21 @@ body {
           flex-direction: row;
   gap: 30px;
 }
-.card__link a,
-.card-for__link a {
+.card__link a {
   font-size: 14px;
   font-weight: 400;
   line-height: 210%;
   color: #000000;
   margin-top: 15px;
+  -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
 }
-.card__counter,
-.card-for__counter {
+.card__link a:hover {
+  color: chocolate;
+}
+.card__counter {
   width: 71px;
   height: 51px;
   font-size: 14px;
@@ -540,6 +551,15 @@ body {
   line-height: 24px;
   color: #000000;
   margin-bottom: 64px;
+}
+.content-link a {
+  -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+}
+.content-link a:hover {
+  color: chocolate;
 }
 
 .catalog-menu {
@@ -673,6 +693,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+}
+.form-pay-btn__submit:hover {
+  background-color: hsl(211, 78%, 87%);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .cart {
@@ -733,6 +765,18 @@ body {
   background-color: transparent;
   border: 1px solid #020202;
   border-radius: 50px;
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.2s ease;
+}
+.cart__btn button:hover {
+  background-color: hsl(211, 78%, 87%);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 * {
@@ -1036,7 +1080,7 @@ input[type=checkbox]:checked + label::after {
           justify-content: flex-end;
 }
 
-.buttom_submit {
+.button-submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

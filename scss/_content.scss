@@ -30,8 +30,7 @@
     row-gap: 32px;
 }
 
-.card,
-.card-for {
+.card {
     position: relative;
     grid-column: span 4;
 
@@ -131,6 +130,7 @@
             line-height: 210%;
             color: #000000;
             margin-top: 15px;
+            @include hover-link;
         }
     }
 
@@ -148,13 +148,16 @@
 
 }
 
-
 .content-link {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     color: #000000;
     margin-bottom: 64px;
+
+    & a {
+        @include hover-link;
+    }
 }
 
 .catalog-menu {
@@ -252,6 +255,7 @@
             border-radius: 20px;
             justify-content: center;
             align-items: center;
+            @include hover-btn
         }
     }
 }
@@ -296,6 +300,7 @@
             background-color: transparent;
             border: 1px solid #020202;
             border-radius: 50px;
+            @include hover-btn
         }
     }
 }
