@@ -238,6 +238,12 @@ body {
   border-radius: 20px;
   width: 260px;
   height: 46px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.footer-form__button:hover {
+  background-color: hsl(211, 78%, 87%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 .content {

@@ -276,6 +276,7 @@ body {
       border-radius: 20px;
       width: 260px;
       height: 46px;
+      @include hover-btn;
     }
   }
 }
