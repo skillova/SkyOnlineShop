@@ -2,22 +2,29 @@ $color-input: #ffffff;
 $color-border: #cacdd8;
 $color-title: #000000;
 
-@mixin hover-btn($duration: 0.3s, $ease: ease) {
+@mixin hover-btn() {
   transition: background-color 0.3s ease, box-shadow 0.3s ease,
     transform 0.2s ease;
 
   &:hover {
-    background-color: hsl(211, 78%, 87%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
   }
 }
 
 @mixin hover-link() {
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 
   &:hover {
-    color: chocolate;
+    color: rgba(136, 136, 136, 1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
   }
 }
 
@@ -222,6 +229,11 @@ body {
     &__img {
       width: 19px;
       height: 18px;
+
+      &:hover path {
+        transition: all 1s;
+        fill: rgba(0, 0, 0, 1);
+      }
     }
   }
 

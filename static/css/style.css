@@ -90,10 +90,13 @@ body {
 }
 .header-nav-list__link:hover {
   text-decoration: underline;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .header-nav-list__link:hover:hover {
-  color: chocolate;
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .content {
@@ -130,10 +133,13 @@ body {
   line-height: 24px;
   text-decoration-line: underline;
   color: #ffffff;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .content-header__link:hover {
-  color: chocolate;
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .footer {
@@ -176,10 +182,13 @@ body {
 }
 .footer-nav-list .footer-nav-list__link:hover {
   text-decoration: underline;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .footer-nav-list .footer-nav-list__link:hover:hover {
-  color: chocolate;
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 .footer-social-logo {
   display: flex;
@@ -189,6 +198,10 @@ body {
 .footer-social-logo__img {
   width: 19px;
   height: 18px;
+}
+.footer-social-logo__img:hover path {
+  transition: all 1s;
+  fill: rgb(0, 0, 0);
 }
 .footer-subscribe {
   display: flex;
@@ -241,9 +254,13 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 .footer-form__button:hover {
-  background-color: hsl(211, 78%, 87%);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
 }
 
 .content {
@@ -270,10 +287,13 @@ body {
   font-weight: 400;
   line-height: 24px;
   color: #000000;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .content_link a:hover {
-  color: chocolate;
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .col {
@@ -379,10 +399,13 @@ body {
   line-height: 210%;
   color: #000000;
   margin-top: 15px;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .card__link a:hover {
-  color: chocolate;
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 .card-counter {
   width: 71px;
@@ -493,9 +516,13 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 .form-pay-btn__submit:hover {
-  background-color: hsl(211, 78%, 87%);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
 }
 
 .cart {
@@ -539,9 +566,13 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 .cart__btn button:hover {
-  background-color: hsl(211, 78%, 87%);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
 }
 
 * {
@@ -742,7 +773,7 @@ input[type=checkbox]:checked + label::after {
 }
 
 #color-white + label::before {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #888888;
 }
 
@@ -757,58 +788,58 @@ input[type=checkbox]:checked + label::after {
 }
 
 #color-red + label::before {
-  background: #FF0000;
-  border: 1px solid #FF0000;
+  background: #ff0000;
+  border: 1px solid #ff0000;
 }
 
 #color-orange + label::before {
-  background: #FF7A41;
-  border: 1px solid #FF7A41;
+  background: #ff7a41;
+  border: 1px solid #ff7a41;
 }
 
 #color-yelow + label::before {
-  background: #F2CB01;
-  border: 1px solid #F2CB01;
+  background: #f2cb01;
+  border: 1px solid #f2cb01;
 }
 
 #color-green + label::before {
-  background: #00BF2A;
-  border: 1px solid #00BF2A;
+  background: #00bf2a;
+  border: 1px solid #00bf2a;
 }
 
 #color-ltgreen + label::before {
-  background: #1CCC97;
-  border: 1px solid #1CCC97;
+  background: #1ccc97;
+  border: 1px solid #1ccc97;
 }
 
 #color-ltblue + label::before {
-  background: #009FE3;
-  border: 1px solid #009FE3;
+  background: #009fe3;
+  border: 1px solid #009fe3;
 }
 
 #color-blue + label::before {
-  background: #000AF8;
-  border: 1px solid #000AF8;
+  background: #000af8;
+  border: 1px solid #000af8;
 }
 
 #color-violet + label::before {
-  background: #6710D6;
-  border: 1px solid #6710D6;
+  background: #6710d6;
+  border: 1px solid #6710d6;
 }
 
 #color-purple + label::before {
-  background: #9D0DB5;
-  border: 1px solid #9D0DB5;
+  background: #9d0db5;
+  border: 1px solid #9d0db5;
 }
 
 #color-lilac + label::before {
-  background: #D89AFF;
-  border: 1px solid #D89AFF;
+  background: #d89aff;
+  border: 1px solid #d89aff;
 }
 
 #color-pink + label::before {
-  background: #FF65A6;
-  border: 1px solid #FF65A6;
+  background: #ff65a6;
+  border: 1px solid #ff65a6;
 }
 
 .filter-controls {
@@ -826,6 +857,16 @@ input[type=checkbox]:checked + label::after {
   padding: 10px 76px 10px 76px;
   border: 1px solid rgb(4, 4, 4);
   border-radius: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.button-submit:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
 }
 
 @media (max-width: 1200px) {
