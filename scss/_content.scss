@@ -1,0 +1,31 @@
+.content {
+  @include padding-adaptive($screen-width-px);
+  &__title {
+    @include font-montserrat(48px, 600, 100%);
+    color: rgba(0, 0, 0, 1);
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+  }
+}
+.card {
+  grid-column: span 4;
+  &_for-big {
+    grid-column: span 6;
+  }
+  &__img {
+    &-box {
+      position: relative;
+    }
+  }
+  &__title {
+    @include font-montserrat(34px, 600, 100%);
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

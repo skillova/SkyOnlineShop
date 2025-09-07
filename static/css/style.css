@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
@@ -174,4 +175,41 @@
   line-height: 100%;
   text-decoration: none;
   color: rgb(136, 136, 136);
+}
+
+.content {
+  padding: 0 calc((100% - 1200px) / 2);
+}
+.content__title {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+}
+.content__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+.card {
+  grid-column: span 4;
+}
+.card_for-big {
+  grid-column: span 6;
+}
+.card__img-box {
+  position: relative;
+}
+.card__title {
+  font-family: Montserrat;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 100%;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */
