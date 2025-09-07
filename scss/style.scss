@@ -5,7 +5,6 @@ $screen-width-px: 1200px;
 }
 
 @mixin font-montserrat($fs, $fw, $lh) {
-  color: rgba(255, 255, 255, 1);
   font-family: Montserrat;
   font-size: $fs;
   font-weight: $fw;
@@ -26,8 +25,6 @@ $screen-width-px: 1200px;
   @include padding-adaptive($screen-width-px);
   // &__logo {
   // }
-  // &__img {
-  // }
   &__navbar {
     display: flex;
     justify-content: space-between;
@@ -35,7 +32,14 @@ $screen-width-px: 1200px;
     padding: 17.5px 0;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
   }
-  &__search {
+  &__search-block {
+    display: block;
+  }
+  &__search-form {
+    display: block;
+  }
+  &__search-input {
+    @include font-montserrat(16px, 400, 100%);
     width: 288px;
     height: 41px;
     padding: 0 16px;
@@ -43,9 +47,10 @@ $screen-width-px: 1200px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 20px;
-    @include font-montserrat(16px, 400, 100%);
+    color: rgba(255, 255, 255, 1);
     &::placeholder {
       @include font-montserrat(16px, 400, 100%);
+      color: rgba(255, 255, 255, 1);
     }
     &:focus {
       outline: none;
@@ -62,23 +67,106 @@ $screen-width-px: 1200px;
     // }
     &-link {
       text-decoration: none;
+      color: rgba(255, 255, 255, 1);
       @include font-montserrat(16px, 400, 100%);
     }
   }
-  &__box {
+  &__content-box {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
     max-width: 765px;
     padding: 64px 0;
-    &-title {
-      @include font-montserrat(64px, 600, 70px);
+  }
+  &__title {
+    color: rgba(255, 255, 255, 1);
+    @include font-montserrat(64px, 600, 70px);
+  }
+  &__subtitle {
+    color: rgba(255, 255, 255, 1);
+    @include font-montserrat(24px, 400, 32px);
+  }
+  &__button {
+    color: rgba(255, 255, 255, 1);
+    @include font-montserrat(16px, 400, 24px);
+  }
+}
+
+.footer {
+  @include padding-adaptive($screen-width-px);
+  display: flex;
+  justify-content: space-between;
+  background: rgba(247, 246, 246, 1);
+  padding-top: 32px;
+  padding-bottom: 59px;
+  &__nav-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  &__navbar {
+    display: flex;
+    column-gap: 129px;
+  }
+  &__nav-title {
+    @include font-montserrat(24px, 500, 100%);
+    display: block;
+    color: rgba(0, 0, 0, 1);
+  }
+  &__news-title {
+    @include font-montserrat(14px, 500, 100%);
+    color: rgba(0, 0, 0, 1);
+  }
+  &__nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  &__nav-link {
+    @include font-montserrat(14px, 500, 100%);
+    text-decoration: none;
+    color: rgba(136, 136, 136, 1);
+  }
+  &__nav-icons {
+    list-style-type: none;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+  }
+  &__news-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  &__news-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  &__input {
+    width: 260px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(196, 196, 196, 1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 1);
+    padding: 0 17px;
+    &::placeholder {
+      @include font-montserrat(12px, 400, 100%);
+      color: rgba(196, 196, 196, 1);
     }
-    &-subtitle {
-      @include font-montserrat(24px, 400, 32px);
+    &:focus {
+      outline: none;
+      box-shadow: none;
     }
-    &-link {
-      @include font-montserrat(16px, 400, 24px);
-    }
+  }
+  &__btn {
+    @include font-montserrat(12px, 400, 100%);
+    width: 260px;
+    height: 40px;
+    border: 0;
+    border-radius: 16px;
+    background: rgba(222, 215, 215, 0.41);
   }
 }
