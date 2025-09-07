@@ -99,74 +99,70 @@ $screen-width-px: 1200px;
   background: rgba(247, 246, 246, 1);
   padding-top: 32px;
   padding-bottom: 59px;
-  &__nav-block {
+  &__block {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+  }
+  &__title {
+    @include font-montserrat(24px, 500, 100%);
+    display: block;
+    color: rgba(0, 0, 0, 1);
+    &_news {
+      font-size: 12px;
+    }
   }
   &__navbar {
     display: flex;
     column-gap: 129px;
   }
-  &__nav-title {
-    @include font-montserrat(24px, 500, 100%);
-    display: block;
-    color: rgba(0, 0, 0, 1);
-  }
-  &__news-title {
-    @include font-montserrat(14px, 500, 100%);
-    color: rgba(0, 0, 0, 1);
-  }
-  &__nav-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-  }
-  &__nav-link {
-    @include font-montserrat(14px, 500, 100%);
-    text-decoration: none;
-    color: rgba(136, 136, 136, 1);
-  }
-  &__nav-icons {
-    list-style-type: none;
-    display: flex;
-    column-gap: 20px;
-    align-items: center;
-  }
-  &__news-block {
+  &__form {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
-  }
-  &__news-form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-  }
-  &__input {
-    width: 260px;
-    height: 40px;
-    box-sizing: border-box;
-    border: 1px solid rgba(196, 196, 196, 1);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 1);
-    padding: 0 17px;
-    &::placeholder {
+    &-input {
+      width: 260px;
+      height: 40px;
+      box-sizing: border-box;
+      border: 1px solid rgba(196, 196, 196, 1);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 1);
+      padding: 0 17px;
+      &::placeholder {
+        @include font-montserrat(12px, 400, 100%);
+        color: rgba(196, 196, 196, 1);
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    &-btn {
       @include font-montserrat(12px, 400, 100%);
-      color: rgba(196, 196, 196, 1);
-    }
-    &:focus {
-      outline: none;
-      box-shadow: none;
+      width: 260px;
+      height: 40px;
+      border: 0;
+      border-radius: 16px;
+      background: rgba(222, 215, 215, 0.41);
     }
   }
-  &__btn {
-    @include font-montserrat(12px, 400, 100%);
-    width: 260px;
-    height: 40px;
-    border: 0;
-    border-radius: 16px;
-    background: rgba(222, 215, 215, 0.41);
+  &__nav {
+    &-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+    &-icons {
+      list-style-type: none;
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+    }
+    &-link {
+      @include font-montserrat(14px, 500, 100%);
+      text-decoration: none;
+      color: rgba(136, 136, 136, 1);
+    }
   }
 }
