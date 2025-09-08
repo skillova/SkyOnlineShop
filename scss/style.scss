@@ -24,6 +24,7 @@ $screen-width-px: 1200px;
   background-position: center;
   background-size: cover;
   @include padding-adaptive($screen-width-px);
+  margin-bottom: 64px;
   // &__logo {
   // }
   &__navbar {

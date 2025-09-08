@@ -11,6 +11,7 @@
   background-position: center;
   background-size: cover;
   padding: 0 calc((100% - 1200px) / 2);
+  margin-bottom: 64px;
 }
 .header__navbar {
   display: flex;
@@ -179,6 +180,7 @@
 
 .content {
   padding: 0 calc((100% - 1200px) / 2);
+  margin-bottom: 64px;
 }
 .content__title {
   font-family: Montserrat;
@@ -186,11 +188,23 @@
   font-weight: 600;
   line-height: 100%;
   color: rgb(0, 0, 0);
+  margin-bottom: 32px;
 }
 .content__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
+}
+.content__btn {
+  margin-top: 31px;
+}
+.content__btn a {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(0, 0, 0);
+  text-decoration-line: underline;
 }
 
 .card {
@@ -199,17 +213,63 @@
 .card_for-big {
   grid-column: span 6;
 }
-.card__img-box {
+.card__block-img {
   position: relative;
+  margin-bottom: 8px;
+}
+.card__block-img_for {
+  margin-bottom: 0;
+}
+.card__block-title {
+  margin-bottom: 8px;
+}
+.card__block-title_abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0;
+}
+.card__block-text {
+  margin-bottom: 12px;
+}
+.card__block-price {
+  display: flex;
+  column-gap: 32px;
+  margin-bottom: 8px;
+}
+.card__img {
+  display: block;
 }
 .card__title {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+}
+.card__title_for-center {
   font-family: Montserrat;
   font-size: 34px;
   font-weight: 600;
   line-height: 100%;
   color: rgb(255, 255, 255);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+.card__text {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(136, 136, 136);
+}
+.card__price {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  color: rgb(5, 5, 5);
+}
+.card__price_sale {
+  color: rgb(136, 136, 136);
+  text-decoration-line: line-through;
 }/*# sourceMappingURL=style.css.map */
