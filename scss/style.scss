@@ -1,7 +1,7 @@
 $screen-width-px: 1200px;
 
 @mixin padding-adaptive($screen-width-px) {
-  padding: 0 calc((100% - $screen-width-px) / 2);
+  padding: 0 calc((100% - 1200) / 2);
 }
 
 @mixin font-montserrat($fs, $fw, $lh) {
