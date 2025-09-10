@@ -17,7 +17,10 @@
     <header class="header">
         <div class="header__navbar">
             <div class="header__logo">
-                <img src="./media/logo/logo.svg" alt="logo">
+                <picture>
+                    <source media="(max-width: 375px)" srcset="./media/logo/logo-mob.svg">
+                    <img src="./media/logo/logo.svg" alt="logo">
+                </picture>
             </div>
             <div class="header__search-block">
                 <form class="header__form">
@@ -99,7 +102,7 @@
             <article class="card">
                 <div class="card__block-img">
                     <picture>
-                        <source media="(max-width: 786px)" srcset="./media/product/VODA-mob.jpg.">
+                        <source media="(max-width: 786px)" srcset="./media/product/VODA-mob.jpg">
                         <img class="card__img" src="./media/product/VODA.jpeg" alt="">
                     </picture>
                     <div class="card__block-icon">

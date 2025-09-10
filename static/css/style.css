@@ -336,14 +336,24 @@
   .footer {
     padding: 0 calc((100% - 786px) / 2);
     padding-top: 32px;
+    padding-bottom: 59px;
   }
   .footer__logo {
     display: none;
   }
 }
-@media (max-width: 834px) {
+@media (max-width: 768px) {
+  .header {
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 32px;
+  }
   .header__search-block {
     display: none;
+  }
+  .header__navbar {
+    padding-top: 32px;
+    border-bottom: none;
   }
   .header__nav {
     display: none;
@@ -368,9 +378,77 @@
   .header__icon_cart {
     background-image: url("../../media/sprite/cart.svg");
   }
+  .header__content-box {
+    padding-top: 29px;
+  }
+  .header__title {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: center;
+  }
+  .header__subtitle {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+  }
+  .header__button {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
   .footer {
+    padding-left: 17px;
+    padding-right: 17px;
     flex-direction: column;
     align-items: center;
     row-gap: 70px;
+  }
+  .content {
+    padding: 0 17px;
+    margin-bottom: 32px;
+  }
+  .content__title {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+  .content__grid {
+    row-gap: 32px;
+  }
+  .card {
+    grid-column: 1/-1;
+  }
+  .card_for {
+    grid-column: 1/-1;
+  }
+  .card_for-big {
+    grid-column: 1/-1;
+  }
+  .card__title {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .card__title_for-center {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+  .card__price {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

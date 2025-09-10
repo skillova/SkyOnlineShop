@@ -22,8 +22,9 @@
   .footer {
     @include padding-adaptive($screen-width-px);
     padding-top: 32px;
+    padding-bottom: 59px;
     &__logo {
-        display: none;
+      display: none;
     }
   }
 }

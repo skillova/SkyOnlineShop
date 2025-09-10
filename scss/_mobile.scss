@@ -1,7 +1,14 @@
-@media (max-width: 834px) {
+@media (max-width: 768px) {
   .header {
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 32px;
     &__search-block {
       display: none;
+    }
+    &__navbar {
+      padding-top: 32px;
+      border-bottom: none;
     }
     &__nav {
       display: none;
@@ -26,10 +33,57 @@
         background-image: url("../../media/sprite/cart.svg");
       }
     }
+    &__content-box {
+      padding-top: 29px;
+    }
+    &__title {
+      @include font-montserrat(48px, 600, 100%);
+      text-align: center;
+    }
+    &__subtitle {
+      color: rgba(255, 255, 255, 1);
+      @include font-montserrat(16px, 400, 32px);
+      text-align: center;
+    }
+    &__button {
+      color: rgba(255, 255, 255, 1);
+      @include font-montserrat(14px, 400, 24px);
+      text-align: center;
+    }
   }
   .footer {
+    padding-left: 17px;
+    padding-right: 17px;
     flex-direction: column;
     align-items: center;
     row-gap: 70px;
+  }
+  .content {
+    padding: 0 17px;
+    margin-bottom: 32px;
+    &__title {
+      @include font-montserrat(24px, 600, 100%);
+    }
+    &__grid {
+      row-gap: 32px;
+    }
+  }
+  .card {
+    grid-column: 1 / -1;
+    &_for {
+      grid-column: 1 / -1;
+      &-big {
+        grid-column: 1 / -1;
+      }
+    }
+    &__title {
+      @include font-montserrat(28px, 500, 100%);
+      &_for-center {
+        @include font-montserrat(28px, 600, 100%);
+      }
+    }
+    &__price {
+      @include font-montserrat(18px, 500, 100%);
+    }
   }
 }
