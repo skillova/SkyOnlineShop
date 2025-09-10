@@ -51,10 +51,14 @@ $screen-width-px: 1200px;
     }
   }
   &__nav {
+    display: block;
     &-list {
       list-style: none;
       display: flex;
       gap: 32px;
+    }
+    &-icon {
+      display: none;
     }
     // &-item {
     // }
@@ -163,6 +167,6 @@ $screen-width-px: 1200px;
   }
 }
 
-
 @import "content";
-@import "tablet"
+@import "tablet";
+@import "mobile";
