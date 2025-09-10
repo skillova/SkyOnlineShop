@@ -1,0 +1,29 @@
+@media (max-width: 1200px) {
+  $screen-width-px: 786px;
+  .header {
+    @include padding-adaptive($screen-width-px);
+  }
+  .content {
+    @include padding-adaptive($screen-width-px);
+    &__grid {
+      row-gap: 30px;
+      column-gap: 29px;
+    }
+  }
+  .card {
+    grid-column: span 6;
+    &_for {
+      grid-column: span 4;
+      &-big {
+        grid-column: span 6;
+      }
+    }
+  }
+  .footer {
+    @include padding-adaptive($screen-width-px);
+    padding-top: 32px;
+    &__logo {
+        display: none;
+    }
+  }
+}

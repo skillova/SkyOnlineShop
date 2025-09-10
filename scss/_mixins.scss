@@ -1,0 +1,17 @@
+@mixin padding-adaptive($screen-width-px) {
+  padding: 0 calc((100% - $screen-width-px) / 2);
+}
+
+@mixin font-montserrat($fs, $fw, $lh) {
+  font-family: Montserrat;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin font-montserrat($fs, $fw, $lh) {
+  font-family: Montserrat;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}

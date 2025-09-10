@@ -44,7 +44,7 @@
 
     <section class="content">
         <h1 class="content__title">Мебель для ... </h1>
-        <div class="content__grid">
+        <div class="content__grid content__grid_for">
             <article class="card card_for-big">
                 <div class="card__block-img card__block-img_for">
                     <img class="card__img" src="./media/product/for_rest.jpg" alt="">
@@ -55,13 +55,13 @@
             </article>
             <article class="card card_for-big">
                 <div class="card__block-img card__block-img_for">
-                    <img src="./media/product/for_work.jpg" alt="">
+                    <img class="card__img" src="./media/product/for_work.jpg" alt="">
                     <div class="card__block-title card__block-title_abs-center">
                         <h1 class="card__title card__title_for-center">РАБОТЫ</h1>
                     </div>
                 </div>
             </article>
-            <article class="card">
+            <article class="card card_for">
                 <div class="card__block-img card__block-img_for">
                     <img class="card__img" src="./media/product/for_kitchen.jpg" alt="">
                     <div class="card__block-title card__block-title_abs-center">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </article>
-            <article class="card">
+            <article class="card card_for">
                 <div class="card__block-img card__block-img_for">
                     <img class="card__img" src="./media/product/for_children.jpg" alt="">
                     <div class="card__block-title card__block-title_abs-center">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </article>
-            <article class="card">
+            <article class="card card_for">
                 <div class="card__block-img card__block-img_for">
                     <img class="card__img" src="./media/product/for_bathroom.jpg" alt="">
                     <div class="card__block-title card__block-title_abs-center">
@@ -93,7 +93,14 @@
         <div class="content__grid">
             <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/VODA.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/VODA-mob.jpg.">
+                        <img class="card__img" src="./media/product/VODA.jpeg" alt="">
+                    </picture>
+                    <div class="card__block-icon">
+                        <a class="card__icon card__icon_buy" href="#"></a>
+                        <a class="card__icon card__icon_like" href="#"></a>
+                    </div>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">
@@ -111,7 +118,14 @@
             </article>
             <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/RONALD.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/RONALD-mob.jpg">
+                        <img class="card__img" src="./media/product/RONALD.jpeg" alt="">
+                    </picture>
+                    <div class="card__block-icon">
+                        <a class="card__icon card__icon_buy" href="#"></a>
+                        <a class="card__icon card__icon_like" href="#"></a>
+                    </div>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">
@@ -129,7 +143,12 @@
             </article>
             <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/VENT.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/VENT-mob.jpg">
+                        <img class="card__img" src="./media/product/VENT.jpeg" alt="">
+                    </picture>
+                    <a class="card__icon card__icon_buy" href="#"></a>
+                    <a class="card__icon card__icon_like" href="#"></a>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">
@@ -148,19 +167,25 @@
         </div>
     </section>
 
-        <section class="content">
+    <section class="content">
         <h1 class="content__title">Каталог товаров</h1>
         <div class="content__grid">
             <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/TATRAN.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/TATRAN-mob.jpg">
+                        <img class="card__img" src="./media/product/TATRAN.jpeg" alt="">
+                    </picture>
+                    <a class="card__icon card__icon_buy" href="#"></a>
+                    <a class="card__icon card__icon_like" href="#"></a>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">
                         <h1 class="card__title">Кровать TATRAN</h1>
                     </div>
                     <div class="card__block-text">
-                        <h2 class="card__text">Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.</h2>
+                        <h2 class="card__text">Основание из полированной нержавеющей стали, придает оригинальный парящий
+                            эффект.</h2>
                     </div>
                     <div class="card__block-price">
                         <span class="card__price">120 000 руб.</span>
@@ -169,14 +194,20 @@
             </article>
             <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/VILORA.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/VILORA-mob.jpg">
+                        <img class="card__img" src="./media/product/VILORA.jpeg" alt="">
+                    </picture>
+                    <a class="card__icon card__icon_buy" href="#"></a>
+                    <a class="card__icon card__icon_like" href="#"></a>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">
                         <h1 class="card__title">Кресло VILORA</h1>
                     </div>
                     <div class="card__block-text">
-                        <h2 class="card__text">Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань.
+                        <h2 class="card__text">Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и
+                            приятная на ощупь ткань.
                         </h2>
                     </div>
                     <div class="card__block-price">
@@ -186,14 +217,20 @@
             </article>
             <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/MENU.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/MENU-mob.jpg">
+                        <img class="card__img" src="./media/product/MENU.jpeg" alt="">
+                    </picture>
+                    <a class="card__icon card__icon_buy" href="#"></a>
+                    <a class="card__icon card__icon_like" href="#"></a>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">
                         <h1 class="card__title">Стол MENU</h1>
                     </div>
                     <div class="card__block-text">
-                        <h2 class="card__text">Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.
+                        <h2 class="card__text">Для того чтобы трапезничать было приятно, необходим правильный обеденный
+                            стол.
                         </h2>
                     </div>
                     <div class="card__block-price">
@@ -201,16 +238,22 @@
                     </div>
                 </div>
             </article>
-                        <article class="card">
+            <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/ASKESTA.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/ASKESTA-mob.jpg">
+                        <img class="card__img" src="./media/product/ASKESTA.jpeg" alt="">
+                    </picture>
+                    <a class="card__icon card__icon_buy" href="#"></a>
+                    <a class="card__icon card__icon_like" href="#"></a>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">
                         <h1 class="card__title">Кресло ASKESTA</h1>
                     </div>
                     <div class="card__block-text">
-                        <h2 class="card__text">Высокоэластичный пенополиуретан в «начинке» кресла надежен и долговечен.</h2>
+                        <h2 class="card__text">Высокоэластичный пенополиуретан в «начинке» кресла надежен и долговечен.
+                        </h2>
                     </div>
                     <div class="card__block-price">
                         <span class="card__price">68 000 руб.</span>
@@ -219,7 +262,12 @@
             </article>
             <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/NORMAN.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/NORMAN-mob.jpg">
+                        <img class="card__img" src="./media/product/NORMAN.jpeg" alt="">
+                    </picture>
+                    <a class="card__icon card__icon_buy" href="#"></a>
+                    <a class="card__icon card__icon_like" href="#"></a>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">
@@ -236,7 +284,12 @@
             </article>
             <article class="card">
                 <div class="card__block-img">
-                    <img class="card__img" src="./media/product/NASTAN.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width: 786px)" srcset="./media/product/NASTAN-mob.jpg">
+                        <img class="card__img" src="./media/product/NASTAN.jpeg" alt="">
+                    </picture>
+                    <a class="card__icon card__icon_buy" href="#"></a>
+                    <a class="card__icon card__icon_like" href="#"></a>
                 </div>
                 <div class="card__body">
                     <div class="card__block-title">

@@ -1,15 +1,6 @@
+@import "mixins";
+
 $screen-width-px: 1200px;
-
-@mixin padding-adaptive($screen-width-px) {
-  padding: 0 calc((100% - 1200) / 2);
-}
-
-@mixin font-montserrat($fs, $fw, $lh) {
-  font-family: Montserrat;
-  font-size: $fs;
-  font-weight: $fw;
-  line-height: $lh;
-}
 
 * {
   margin: 0;
@@ -106,6 +97,9 @@ $screen-width-px: 1200px;
     flex-direction: column;
     row-gap: 8px;
   }
+  &__logo {
+    display: block;
+  }
   &__title {
     @include font-montserrat(24px, 500, 100%);
     display: block;
@@ -169,4 +163,6 @@ $screen-width-px: 1200px;
   }
 }
 
+
 @import "content";
+@import "tablet"
