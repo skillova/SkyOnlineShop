@@ -1,3 +1,15 @@
+select {
+  all: unset; /* Сбрасывает все стили */
+  border: none; /* Удаляем границу */
+  background: transparent; /* Прозрачное фоновое изображение */
+  background-color: transparent; /* Прозрачная заливка */
+  appearance: none; /* Стандартное свойство */
+  outline: none; /* Убираем выделение при фокусе */
+  box-shadow: none; /* Убираем тень */
+  padding: 0; /* Убираем отступы */
+  margin: 0; /* Убираем поля */
+}
+
 .content {
   @include padding-adaptive($screen-width-px);
   margin-bottom: 64px;
@@ -15,7 +27,7 @@
       gap: 32px;
     }
   }
-  &__btn {
+  &__link {
     margin-top: 31px;
     & a {
       @include font-montserrat(16px, 400, 24px);
@@ -23,7 +35,49 @@
       text-decoration-line: underline;
     }
   }
+  &__block {
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-path {
+      display: flex;
+      column-gap: 10px;
+      & * {
+        @include font-montserrat(16px, 400, 32px);
+        color: rgba(0, 0, 0, 1);
+        text-decoration: none;
+      }
+    }
+    &-btn {
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+  &__btn {
+    position: relative;
+    max-width: 225px;
+    &-select {
+      @include font-montserrat(16px, 400, 100%);
+      text-align: left;
+      width: 182px;
+      border: 1px solid rgba(196, 196, 196, 1);
+      border-radius: 20px;
+      padding: 10px 22px;
+    }
+    &::after {
+      content: url("../../media/sprite/arrow-down.svg");
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: #666;
+      font-size: 12px;
+    }
+  }
 }
+
 .card {
   position: relative;
   grid-column: span 4;

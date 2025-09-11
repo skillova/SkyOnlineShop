@@ -9,13 +9,19 @@ $screen-width-px: 1200px;
 }
 
 .header {
-  height: 735px;
-  background-image: url(../../media/img/index_header.jpeg);
+  @include padding-adaptive($screen-width-px);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @include padding-adaptive($screen-width-px);
   margin-bottom: 64px;
+  &_index {
+    background-image: url(../../media/img/index_header.jpeg);
+    height: 735px;
+  }
+  &_catalog {
+    background-image: url(../../media/img/catalog_header.jpeg);
+    height: 400px;
+  }
   // &__logo {
   // }
   &__navbar {
@@ -68,24 +74,29 @@ $screen-width-px: 1200px;
       @include font-montserrat(16px, 400, 100%);
     }
   }
-  &__content-box {
+  &__block-content {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
     max-width: 765px;
-    padding: 64px 0;
+    &_index {
+      padding-top: 64px;
+    }
+    &_catalog {
+      padding-top: 128px;
+    }
   }
   &__title {
-    color: rgba(255, 255, 255, 1);
     @include font-montserrat(64px, 600, 70px);
+    color: rgba(255, 255, 255, 1);
   }
   &__subtitle {
-    color: rgba(255, 255, 255, 1);
     @include font-montserrat(24px, 400, 32px);
+    color: rgba(255, 255, 255, 1);
   }
   &__button {
-    color: rgba(255, 255, 255, 1);
     @include font-montserrat(16px, 400, 24px);
+    color: rgba(255, 255, 255, 1);
   }
 }
 

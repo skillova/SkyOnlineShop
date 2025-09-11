@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +6,19 @@
 }
 
 .header {
-  height: 735px;
-  background-image: url(../../media/img/index_header.jpeg);
+  padding: 0 calc((100% - 1200px) / 2);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 0 calc((100% - 1200px) / 2);
   margin-bottom: 64px;
+}
+.header_index {
+  background-image: url(../../media/img/index_header.jpeg);
+  height: 735px;
+}
+.header_catalog {
+  background-image: url(../../media/img/catalog_header.jpeg);
+  height: 400px;
 }
 .header__navbar {
   display: flex;
@@ -70,33 +77,38 @@
   font-weight: 400;
   line-height: 100%;
 }
-.header__content-box {
+.header__block-content {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
   max-width: 765px;
-  padding: 64px 0;
+}
+.header__block-content_index {
+  padding-top: 64px;
+}
+.header__block-content_catalog {
+  padding-top: 128px;
 }
 .header__title {
-  color: rgb(255, 255, 255);
   font-family: Montserrat;
   font-size: 64px;
   font-weight: 600;
   line-height: 70px;
+  color: rgb(255, 255, 255);
 }
 .header__subtitle {
-  color: rgb(255, 255, 255);
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
+  color: rgb(255, 255, 255);
 }
 .header__button {
-  color: rgb(255, 255, 255);
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  color: rgb(255, 255, 255);
 }
 
 .footer {
@@ -187,6 +199,18 @@
   color: rgb(136, 136, 136);
 }
 
+select {
+  all: unset; /* Сбрасывает все стили */
+  border: none; /* Удаляем границу */
+  background: transparent; /* Прозрачное фоновое изображение */
+  background-color: transparent; /* Прозрачная заливка */
+  appearance: none; /* Стандартное свойство */
+  outline: none; /* Убираем выделение при фокусе */
+  box-shadow: none; /* Убираем тень */
+  padding: 0; /* Убираем отступы */
+  margin: 0; /* Убираем поля */
+}
+
 .content {
   padding: 0 calc((100% - 1200px) / 2);
   margin-bottom: 64px;
@@ -208,16 +232,61 @@
 .content__grid_for {
   gap: 32px;
 }
-.content__btn {
+.content__link {
   margin-top: 31px;
 }
-.content__btn a {
+.content__link a {
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: rgb(0, 0, 0);
   text-decoration-line: underline;
+}
+.content__block-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.content__block-path {
+  display: flex;
+  column-gap: 10px;
+}
+.content__block-path * {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.content__block-btn {
+  display: flex;
+  column-gap: 10px;
+}
+.content__btn {
+  position: relative;
+  max-width: 225px;
+}
+.content__btn-select {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: left;
+  width: 182px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 20px;
+  padding: 10px 22px;
+}
+.content__btn::after {
+  content: url("../../media/sprite/arrow-down.svg");
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+  font-size: 12px;
 }
 
 .card {
@@ -423,6 +492,15 @@
   }
   .content__grid {
     row-gap: 32px;
+  }
+  .content__block-nav {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 14px;
+  }
+  .content__block-btn {
+    flex-direction: column;
+    row-gap: 10px;
   }
   .card {
     grid-column: 1/-1;
