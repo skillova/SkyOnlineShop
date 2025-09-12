@@ -382,6 +382,65 @@ select {
   text-decoration-line: line-through;
 }
 
+fieldset,
+legend,
+input,
+label {
+  all: unset; /* Сброс всех стилей */
+}
+
+input[type=radio] {
+  display: none; /* Скрываем стандартные радиокнопки */
+}
+
+input[type=radio] + label {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  position: relative; /* Устанавливаем относительное позиционирование метки */
+  padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+  cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+}
+
+input[type=radio] + label:before {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 0; /* Выравниваем по левой стороне метки */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  width: 15px; /* Ширина стилизованного элемента */
+  height: 15px; /* Высота стилизованного элемента */
+  border: 2px solid #000; /* Черная граница */
+  border-radius: 50%; /* Скругляем углы до состояния круга */
+  background: #fff; /* Белый фон внутри элемента */
+}
+
+input[type=radio]:checked + label:after {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+  top: 35%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  width: 15px; /* Ширина элекмента внутри стилизованного элемента */
+  height: 15px; /* Высота элемента внутри стилизованного элемента */
+  background-image: url("../../media/sprite/V.png");
+  background-size: cover;
+}
+
+.drop-filter__title {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  color: rgb(5, 5, 5);
+}
+.drop-filter__radio {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 0 calc((100% - 786px) / 2);
