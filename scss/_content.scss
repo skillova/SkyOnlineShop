@@ -161,11 +161,33 @@ select {
   }
 }
 
-fieldset,
-legend,
-input,
-label {
-  all: unset; /* Сброс всех стилей */
+// fieldset,
+// legend,
+// input,
+// label {
+//   all: unset; /* Сброс всех стилей */
+// }
+
+.drop {
+  display: flex;
+  flex-direction: row;
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  gap: 14px;
+  & legend {
+    @include font-montserrat(16px, 500, 100%);
+    color: rgba(5, 5, 5, 1);
+    margin-bottom: 16px;
+  }
 }
 
 input[type="radio"] {
@@ -202,15 +224,42 @@ input[type="radio"]:checked + label:after {
   background-size: cover;
 }
 
-.drop {
-  &-filter {
-    &__title {
-      @include font-montserrat(14px, 500, 100%);
-      color: rgba(5, 5, 5, 1);
-    }
-    &__radio {
-      display: flex;
-      flex-direction: column;
-    }
+.range {
+  &__block {
+    position: relative;
   }
+  &__text {
+    @include font-montserrat(14px, 400, 100%);
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+input[type="range"] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1px; /* Толщина линии */
+  background: none;
+  outline: none;
+  &:first-of-type {
+    background: rgba(0, 0, 0, 1);
+  }
+}
+
+/* Стили для трекбара */
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track,
+input[type="range"]::-ms-track {
+  border: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 1);
 }
