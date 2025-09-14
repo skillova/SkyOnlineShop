@@ -206,21 +206,24 @@ input[type="radio"] + label:before {
   left: 0; /* Выравниваем по левой стороне метки */
   top: 50%; /* Центрируем по вертикали относительно метки */
   transform: translateY(-50%); /* Поправка для точного центрирования */
-  width: 15px; /* Ширина стилизованного элемента */
-  height: 15px; /* Высота стилизованного элемента */
-  border: 2px solid #000; /* Черная граница */
+  width: 14px; /* Ширина стилизованного элемента */
+  height: 14px; /* Высота стилизованного элемента */
+  border: 1px solid rgba(136, 136, 136, 1); /* Черная граница */
   border-radius: 50%; /* Скругляем углы до состояния круга */
   background: #fff; /* Белый фон внутри элемента */
+}
+input[type="radio"]:checked + label:before {
+  border: 1px solid rgba(0, 0, 0, 1);
 }
 input[type="radio"]:checked + label:after {
   content: ""; /* Содержимое пусто, но стиль будет применен */
   position: absolute; /* Устанавливаем абсолютное позиционирование */
-  left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
-  top: 35%; /* Центрируем по вертикали относительно метки */
+  left: 5px; /* Выравниваем по левой стороне метки со сдвигом */
+  top: 50%; /* Центрируем по вертикали относительно метки */
   transform: translateY(-50%); /* Поправка для точного центрирования */
-  width: 15px; /* Ширина элекмента внутри стилизованного элемента */
-  height: 15px; /* Высота элемента внутри стилизованного элемента */
-  background-image: url("../../media/sprite/V.png");
+  width: 6.5px; /* Ширина элекмента внутри стилизованного элемента */
+  height: 6px; /* Высота элемента внутри стилизованного элемента */
+  background-image: url("../../media/sprite/V.svg");
   background-size: cover;
 }
 
@@ -233,7 +236,6 @@ input[type="radio"]:checked + label:after {
     color: rgba(0, 0, 0, 1);
   }
 }
-
 input[type="range"] {
   position: absolute;
   -webkit-appearance: none;
@@ -247,14 +249,11 @@ input[type="range"] {
     background: rgba(0, 0, 0, 1);
   }
 }
-
-/* Стили для трекбара */
 input[type="range"]::-webkit-slider-runnable-track,
 input[type="range"]::-moz-range-track,
 input[type="range"]::-ms-track {
   border: none;
 }
-
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
