@@ -406,14 +406,35 @@ select {
   text-decoration-line: line-through;
 }
 
-.drop {
+.drop-menu {
   display: flex;
   flex-direction: row;
+  width: 541.5px;
+  -moz-column-gap: 65px;
+       column-gap: 65px;
+  padding: 40px 48px;
 }
-.drop__group {
+.drop-menu__block {
   display: flex;
-  flex-direction: column;
+  width: 190.5px;
   gap: 32px;
+}
+.drop-menu__block_row {
+  flex-direction: row;
+}
+.drop-menu__block_col {
+  flex-direction: column;
+}
+.drop-menu__group-items {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.drop-menu__group-items_row {
+  flex-direction: row;
+}
+.drop-menu__group-items_col {
+  flex-direction: column;
 }
 
 fieldset {
@@ -431,52 +452,9 @@ fieldset legend {
   margin-bottom: 16px;
 }
 
-input[type=radio] {
-  display: none; /* Скрываем стандартные радиокнопки */
-}
-
-input[type=radio] + label {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 100%;
-  color: rgb(0, 0, 0);
-  position: relative; /* Устанавливаем относительное позиционирование метки */
-  padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
-  cursor: pointer; /* Меняем курсор мыши при наведении на метку */
-}
-
-input[type=radio] + label:before {
-  content: ""; /* Содержимое пусто, но стиль будет применен */
-  position: absolute; /* Устанавливаем абсолютное позиционирование */
-  left: 0; /* Выравниваем по левой стороне метки */
-  top: 50%; /* Центрируем по вертикали относительно метки */
-  transform: translateY(-50%); /* Поправка для точного центрирования */
-  width: 14px; /* Ширина стилизованного элемента */
-  height: 14px; /* Высота стилизованного элемента */
-  border: 1px solid rgb(136, 136, 136); /* Черная граница */
-  border-radius: 50%; /* Скругляем углы до состояния круга */
-  background: #fff; /* Белый фон внутри элемента */
-}
-
-input[type=radio]:checked + label:before {
-  border: 1px solid rgb(0, 0, 0);
-}
-
-input[type=radio]:checked + label:after {
-  content: ""; /* Содержимое пусто, но стиль будет применен */
-  position: absolute; /* Устанавливаем абсолютное позиционирование */
-  left: 5px; /* Выравниваем по левой стороне метки со сдвигом */
-  top: 50%; /* Центрируем по вертикали относительно метки */
-  transform: translateY(-50%); /* Поправка для точного центрирования */
-  width: 6.5px; /* Ширина элекмента внутри стилизованного элемента */
-  height: 6px; /* Высота элемента внутри стилизованного элемента */
-  background-image: url("../../media/sprite/V.svg");
-  background-size: cover;
-}
-
 .range__block {
   position: relative;
+  width: 190.5px;
 }
 .range__text {
   font-family: Montserrat;
@@ -513,6 +491,157 @@ input[type=range]::-webkit-slider-thumb {
   height: 8px;
   border-radius: 50%;
   background: rgb(0, 0, 0);
+}
+
+input[type=radio] {
+  display: none; /* Скрываем стандартные радиокнопки */
+}
+input[type=radio] + label {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  position: relative; /* Устанавливаем относительное позиционирование метки */
+  padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+  cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+}
+input[type=radio] + label::before {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 0; /* Выравниваем по левой стороне метки */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  box-sizing: border-box;
+  width: 15px; /* Ширина стилизованного элемента */
+  height: 15px; /* Высота стилизованного элемента */
+  border: 1px solid rgb(136, 136, 136); /* Черная граница */
+  border-radius: 50%; /* Скругляем углы до состояния круга */
+  background: #fff; /* Белый фон внутри элемента */
+}
+input[type=radio]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+input[type=radio]:checked + label::before {
+  border: 1px solid rgb(0, 0, 0);
+}
+input[type=radio]:checked + label::after {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  width: 6.5px; /* Ширина элекмента внутри стилизованного элемента */
+  height: 6px; /* Высота элемента внутри стилизованного элемента */
+  background-image: url("../../media/sprite/V.svg");
+  background-size: cover;
+}
+
+input[type=checkbox] {
+  display: none; /* Скрываем стандартные радиокнопки */
+}
+input[type=checkbox] + label {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  position: relative; /* Устанавливаем относительное позиционирование метки */
+  padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+  cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+}
+input[type=checkbox] + label:empty {
+  padding-left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+input[type=checkbox] + label::before {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 0; /* Выравниваем по левой стороне метки */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  box-sizing: border-box;
+  width: 15px; /* Ширина стилизованного элемента */
+  height: 15px; /* Высота стилизованного элемента */
+  border: 1px solid rgb(136, 136, 136); /* Черная граница */
+  background: #ffffff; /* Белый фон внутри элемента */
+}
+input[type=checkbox]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+input[type=checkbox]:checked + label::before {
+  border: 1px solid rgb(0, 0, 0);
+}
+input[type=checkbox]:checked + label::after {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  width: 7px; /* Ширина элекмента внутри стилизованного элемента */
+  height: 7px; /* Высота элемента внутри стилизованного элемента */
+  background-image: url("../../media/sprite/V.svg");
+  background-size: cover;
+}
+
+#checkbox-1 + label::before {
+  background: #ffffff;
+}
+
+#checkbox-2 + label::before {
+  background: #000000;
+}
+
+#checkbox-3 + label::before {
+  background: #737373;
+}
+
+#checkbox-4 + label::before {
+  background: #ff0000;
+}
+
+#checkbox-5 + label::before {
+  background: #ff7a41;
+}
+
+#checkbox-6 + label::before {
+  background: #f2cb01;
+}
+
+#checkbox-7 + label::before {
+  background: #00bf2a;
+}
+
+#checkbox-8 + label::before {
+  background: #1ccc97;
+}
+
+#checkbox-9 + label::before {
+  background: #009fe3;
+}
+
+#checkbox-10 + label::before {
+  background: #000af8;
+}
+
+#checkbox-11 + label::before {
+  background: #6710d6;
+}
+
+#checkbox-12 + label::before {
+  background: #9d0db5;
+}
+
+#checkbox-13 + label::before {
+  background: #d89aff;
+}
+
+#checkbox-14 + label::before {
+  background: #ff65a6;
 }
 
 @media (max-width: 1200px) {
