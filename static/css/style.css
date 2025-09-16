@@ -684,6 +684,9 @@ input[type=checkbox]:checked + label::after {
   .footer__logo {
     display: none;
   }
+  .form-filter {
+    left: -124px;
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -804,5 +807,13 @@ input[type=checkbox]:checked + label::after {
     font-size: 18px;
     font-weight: 500;
     line-height: 100%;
+  }
+  .form-filter {
+    left: 0;
+    top: 106px;
+    width: 286.5px;
+  }
+  .form-filter__block {
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=style.css.map */

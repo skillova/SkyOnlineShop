@@ -97,4 +97,14 @@
       @include font-montserrat(18px, 500, 100%);
     }
   }
+  .form {
+    &-filter {
+      left: 0;
+      top: 106px;
+      width: 286.5px;
+      &__block {
+        flex-wrap: wrap;
+      }
+    }
+  }
 }
