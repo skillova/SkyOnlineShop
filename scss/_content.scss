@@ -50,6 +50,7 @@ select {
       }
     }
     &-btn {
+      position: relative;
       display: flex;
       column-gap: 10px;
     }
@@ -168,36 +169,40 @@ select {
 //   all: unset; /* Сброс всех стилей */
 // }
 
-.drop {
-  &-menu {
+.form {
+  &-filter {
+    position: absolute;
+    top: 52px;
+    left: -360px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 541.5px;
-    column-gap: 65px;
+    box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 1);
     padding: 40px 48px;
+    z-index: 1;
+
     &__block {
       display: flex;
-      width: 190.5px;
-      gap: 32px;
-      &_row {
-        flex-direction: row;
-      }
-      &_col {
-        flex-direction: column;
-      }
+      flex-direction: row;
+      column-gap: 65px;
     }
-    &__group {
-      &-items {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        &_row {
-          flex-direction: row;
-        }
-        &_col {
-          flex-direction: column;
-        }
-      }
+    &__block-items {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    &__block-btn {
+      display: flex;
+      justify-content: end;
+    }
+    &__btn {
+      @include font-montserrat(16px, 400, 100%);
+      width: 190px;
+      height: 40px;
+      border: 1px solid rgba(4, 4, 4, 1);
+      border-radius: 16px;
+      background: rgba(222, 215, 215, 0.41);
     }
   }
 }
@@ -206,7 +211,9 @@ fieldset {
   display: flex;
   flex-direction: column;
   border: none;
+  width: 190.5px;
   gap: 14px;
+  margin-bottom: 32px;
   & legend {
     @include font-montserrat(16px, 500, 100%);
     color: rgba(5, 5, 5, 1);
