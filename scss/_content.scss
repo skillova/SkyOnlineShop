@@ -50,6 +50,7 @@ select {
       }
     }
     &-btn {
+      position: relative;
       display: flex;
       column-gap: 10px;
     }
@@ -159,4 +160,255 @@ select {
       text-decoration-line: line-through;
     }
   }
+}
+
+// fieldset,
+// legend,
+// input,
+// label {
+//   all: unset; /* Сброс всех стилей */
+// }
+
+.form {
+  &-filter {
+    position: absolute;
+    top: 52px;
+    left: -360px;
+    display: flex;
+    flex-direction: column;
+    width: 541.5px;
+    box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 1);
+    padding: 40px 48px;
+    z-index: 1;
+
+    &__block {
+      display: flex;
+      flex-direction: row;
+      column-gap: 65px;
+    }
+    &__block-items {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    &__block-btn {
+      display: flex;
+      justify-content: end;
+    }
+    &__btn {
+      @include font-montserrat(16px, 400, 100%);
+      width: 190px;
+      height: 40px;
+      border: 1px solid rgba(4, 4, 4, 1);
+      border-radius: 16px;
+      background: rgba(222, 215, 215, 0.41);
+    }
+  }
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 190.5px;
+  gap: 14px;
+  margin-bottom: 32px;
+  & legend {
+    @include font-montserrat(16px, 500, 100%);
+    color: rgba(5, 5, 5, 1);
+    margin-bottom: 16px;
+  }
+}
+
+.range {
+  &__block {
+    position: relative;
+    width: 190.5px;
+  }
+  &__text {
+    @include font-montserrat(14px, 400, 100%);
+    color: rgba(0, 0, 0, 1);
+  }
+}
+input[type="range"] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1px; /* Толщина линии */
+  background: none;
+  outline: none;
+  &:first-of-type {
+    background: rgba(0, 0, 0, 1);
+  }
+}
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track,
+input[type="range"]::-ms-track {
+  border: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 1);
+}
+
+input[type="radio"] {
+  display: none; /* Скрываем стандартные радиокнопки */
+  + label {
+    @include font-montserrat(14px, 400, 100%);
+    color: rgba(0, 0, 0, 1);
+    position: relative; /* Устанавливаем относительное позиционирование метки */
+    padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+    cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+    &::before {
+      content: ""; /* Содержимое пусто, но стиль будет применен */
+      position: absolute; /* Устанавливаем абсолютное позиционирование */
+      left: 0; /* Выравниваем по левой стороне метки */
+      top: 50%; /* Центрируем по вертикали относительно метки */
+      transform: translateY(-50%); /* Поправка для точного центрирования */
+      box-sizing: border-box;
+      width: 15px; /* Ширина стилизованного элемента */
+      height: 15px; /* Высота стилизованного элемента */
+      border: 1px solid rgba(136, 136, 136, 1); /* Черная граница */
+      border-radius: 50%; /* Скругляем углы до состояния круга */
+      background: #fff; /* Белый фон внутри элемента */
+
+      // При фокусе
+      @at-root input[type="radio"]:focus + label::before {
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+      }
+
+      // При выборе
+      @at-root input[type="radio"]:checked + label {
+        &::before {
+          border: 1px solid rgba(0, 0, 0, 1);
+        }
+        &::after {
+          content: ""; /* Содержимое пусто, но стиль будет применен */
+          position: absolute; /* Устанавливаем абсолютное позиционирование */
+          left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+          top: 50%; /* Центрируем по вертикали относительно метки */
+          transform: translateY(-50%); /* Поправка для точного центрирования */
+          width: 6.5px; /* Ширина элекмента внутри стилизованного элемента */
+          height: 6px; /* Высота элемента внутри стилизованного элемента */
+          background-image: url("../../media/sprite/V.svg");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+input[type="checkbox"] {
+  display: none; /* Скрываем стандартные радиокнопки */
+  + label {
+    @include font-montserrat(14px, 400, 100%);
+    color: rgba(0, 0, 0, 1);
+    position: relative; /* Устанавливаем относительное позиционирование метки */
+    padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+    cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+    &:empty {
+      padding-left: 0;
+      display: block;
+      width: 15px;
+      height: 15px;
+    }
+    &::before {
+      content: ""; /* Содержимое пусто, но стиль будет применен */
+      position: absolute; /* Устанавливаем абсолютное позиционирование */
+      left: 0; /* Выравниваем по левой стороне метки */
+      top: 50%; /* Центрируем по вертикали относительно метки */
+      transform: translateY(-50%); /* Поправка для точного центрирования */
+      box-sizing: border-box;
+      width: 15px; /* Ширина стилизованного элемента */
+      height: 15px; /* Высота стилизованного элемента */
+      border: 1px solid rgba(136, 136, 136, 1); /* Черная граница */
+      background: #ffffff; /* Белый фон внутри элемента */
+
+      // При фокусе
+      @at-root input[type="checkbox"]:focus + label::before {
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+      }
+
+      // При выборе
+      @at-root input[type="checkbox"]:checked + label {
+        &::before {
+          border: 1px solid rgba(0, 0, 0, 1);
+        }
+        &::after {
+          content: ""; /* Содержимое пусто, но стиль будет применен */
+          position: absolute; /* Устанавливаем абсолютное позиционирование */
+          left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+          top: 50%; /* Центрируем по вертикали относительно метки */
+          transform: translateY(-50%); /* Поправка для точного центрирования */
+          width: 7px; /* Ширина элекмента внутри стилизованного элемента */
+          height: 7px; /* Высота элемента внутри стилизованного элемента */
+          background-image: url("../../media/sprite/V.svg");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+#checkbox-1 + label::before {
+  background: #ffffff;
+}
+
+#checkbox-2 + label::before {
+  background: #000000;
+}
+
+#checkbox-3 + label::before {
+  background: #737373;
+}
+
+#checkbox-4 + label::before {
+  background: #ff0000;
+}
+
+#checkbox-5 + label::before {
+  background: #ff7a41;
+}
+
+#checkbox-6 + label::before {
+  background: #f2cb01;
+}
+
+#checkbox-7 + label::before {
+  background: #00bf2a;
+}
+
+#checkbox-8 + label::before {
+  background: #1ccc97;
+}
+
+#checkbox-9 + label::before {
+  background: #009fe3;
+}
+
+#checkbox-10 + label::before {
+  background: #000af8;
+}
+
+#checkbox-11 + label::before {
+  background: #6710d6;
+}
+
+#checkbox-12 + label::before {
+  background: #9d0db5;
+}
+
+#checkbox-13 + label::before {
+  background: #d89aff;
+}
+
+#checkbox-14 + label::before {
+  background: #ff65a6;
 }

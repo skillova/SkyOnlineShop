@@ -47,6 +47,13 @@
   border-radius: 20px;
   color: rgb(255, 255, 255);
 }
+.header__search-input::-moz-placeholder {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(255, 255, 255);
+}
 .header__search-input::placeholder {
   font-family: Montserrat;
   font-size: 16px;
@@ -140,7 +147,8 @@
 }
 .footer__navbar {
   display: flex;
-  column-gap: 129px;
+  -moz-column-gap: 129px;
+       column-gap: 129px;
 }
 .footer__form {
   display: flex;
@@ -155,6 +163,13 @@
   border-radius: 16px;
   background: rgb(255, 255, 255);
   padding: 0 17px;
+}
+.footer__form-input::-moz-placeholder {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(196, 196, 196);
 }
 .footer__form-input::placeholder {
   font-family: Montserrat;
@@ -187,7 +202,8 @@
 .footer__nav-icons {
   list-style-type: none;
   display: flex;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   align-items: center;
 }
 .footer__nav-link {
@@ -204,7 +220,9 @@ select {
   border: none; /* Удаляем границу */
   background: transparent; /* Прозрачное фоновое изображение */
   background-color: transparent; /* Прозрачная заливка */
-  appearance: none; /* Стандартное свойство */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /* Стандартное свойство */
   outline: none; /* Убираем выделение при фокусе */
   box-shadow: none; /* Убираем тень */
   padding: 0; /* Убираем отступы */
@@ -227,7 +245,8 @@ select {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   row-gap: 48px;
-  column-gap: 32px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 .content__grid_for {
   gap: 32px;
@@ -249,7 +268,8 @@ select {
 }
 .content__block-path {
   display: flex;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 .content__block-path * {
   font-family: Montserrat;
@@ -260,8 +280,10 @@ select {
   text-decoration: none;
 }
 .content__block-btn {
+  position: relative;
   display: flex;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 .content__btn {
   position: relative;
@@ -340,14 +362,17 @@ select {
 }
 .card__block-price {
   display: flex;
-  column-gap: 32px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
   margin-bottom: 8px;
 }
 .card__img {
   display: block;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .card__title {
   font-family: Montserrat;
@@ -382,6 +407,254 @@ select {
   text-decoration-line: line-through;
 }
 
+.form-filter {
+  position: absolute;
+  top: 52px;
+  left: -360px;
+  display: flex;
+  flex-direction: column;
+  width: 541.5px;
+  box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+  background: rgb(255, 255, 255);
+  padding: 40px 48px;
+  z-index: 1;
+}
+.form-filter__block {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 65px;
+       column-gap: 65px;
+}
+.form-filter__block-items {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.form-filter__block-btn {
+  display: flex;
+  justify-content: end;
+}
+.form-filter__btn {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  width: 190px;
+  height: 40px;
+  border: 1px solid rgb(4, 4, 4);
+  border-radius: 16px;
+  background: rgba(222, 215, 215, 0.41);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 190.5px;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+fieldset legend {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  color: rgb(5, 5, 5);
+  margin-bottom: 16px;
+}
+
+.range__block {
+  position: relative;
+  width: 190.5px;
+}
+.range__text {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+}
+
+input[type=range] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1px; /* Толщина линии */
+  background: none;
+  outline: none;
+}
+input[type=range]:first-of-type {
+  background: rgb(0, 0, 0);
+}
+
+input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-moz-range-track,
+input[type=range]::-ms-track {
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+}
+
+input[type=radio] {
+  display: none; /* Скрываем стандартные радиокнопки */
+}
+input[type=radio] + label {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  position: relative; /* Устанавливаем относительное позиционирование метки */
+  padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+  cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+}
+input[type=radio] + label::before {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 0; /* Выравниваем по левой стороне метки */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  box-sizing: border-box;
+  width: 15px; /* Ширина стилизованного элемента */
+  height: 15px; /* Высота стилизованного элемента */
+  border: 1px solid rgb(136, 136, 136); /* Черная граница */
+  border-radius: 50%; /* Скругляем углы до состояния круга */
+  background: #fff; /* Белый фон внутри элемента */
+}
+input[type=radio]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+input[type=radio]:checked + label::before {
+  border: 1px solid rgb(0, 0, 0);
+}
+input[type=radio]:checked + label::after {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  width: 6.5px; /* Ширина элекмента внутри стилизованного элемента */
+  height: 6px; /* Высота элемента внутри стилизованного элемента */
+  background-image: url("../../media/sprite/V.svg");
+  background-size: cover;
+}
+
+input[type=checkbox] {
+  display: none; /* Скрываем стандартные радиокнопки */
+}
+input[type=checkbox] + label {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  position: relative; /* Устанавливаем относительное позиционирование метки */
+  padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+  cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+}
+input[type=checkbox] + label:empty {
+  padding-left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+input[type=checkbox] + label::before {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 0; /* Выравниваем по левой стороне метки */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  box-sizing: border-box;
+  width: 15px; /* Ширина стилизованного элемента */
+  height: 15px; /* Высота стилизованного элемента */
+  border: 1px solid rgb(136, 136, 136); /* Черная граница */
+  background: #ffffff; /* Белый фон внутри элемента */
+}
+input[type=checkbox]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+input[type=checkbox]:checked + label::before {
+  border: 1px solid rgb(0, 0, 0);
+}
+input[type=checkbox]:checked + label::after {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  width: 7px; /* Ширина элекмента внутри стилизованного элемента */
+  height: 7px; /* Высота элемента внутри стилизованного элемента */
+  background-image: url("../../media/sprite/V.svg");
+  background-size: cover;
+}
+
+#checkbox-1 + label::before {
+  background: #ffffff;
+}
+
+#checkbox-2 + label::before {
+  background: #000000;
+}
+
+#checkbox-3 + label::before {
+  background: #737373;
+}
+
+#checkbox-4 + label::before {
+  background: #ff0000;
+}
+
+#checkbox-5 + label::before {
+  background: #ff7a41;
+}
+
+#checkbox-6 + label::before {
+  background: #f2cb01;
+}
+
+#checkbox-7 + label::before {
+  background: #00bf2a;
+}
+
+#checkbox-8 + label::before {
+  background: #1ccc97;
+}
+
+#checkbox-9 + label::before {
+  background: #009fe3;
+}
+
+#checkbox-10 + label::before {
+  background: #000af8;
+}
+
+#checkbox-11 + label::before {
+  background: #6710d6;
+}
+
+#checkbox-12 + label::before {
+  background: #9d0db5;
+}
+
+#checkbox-13 + label::before {
+  background: #d89aff;
+}
+
+#checkbox-14 + label::before {
+  background: #ff65a6;
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 0 calc((100% - 786px) / 2);
@@ -391,7 +664,8 @@ select {
   }
   .content__grid {
     row-gap: 30px;
-    column-gap: 29px;
+    -moz-column-gap: 29px;
+         column-gap: 29px;
   }
   .card {
     grid-column: span 6;
@@ -429,7 +703,8 @@ select {
   }
   .header__nav-icon {
     display: flex;
-    column-gap: 32px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
   }
   .header__icon {
     display: block;
@@ -495,7 +770,8 @@ select {
   }
   .content__block-nav {
     flex-direction: column;
-    column-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
     row-gap: 14px;
   }
   .content__block-btn {
