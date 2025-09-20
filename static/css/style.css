@@ -2,258 +2,200 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
-/* Центрирование контента расчетными отступами */
-.center {
-  padding: 0 calc((100% - 1200px) / 2);
-}
-
-/* header общие настройки */
 .header {
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
+  padding: 0 calc((100% - 1200px) / 2);
+  background-repeat: no-repeat;
   background-position: center;
-  /* header главная страница */
-  /* Навигационное меню в <header> */
-  /* Поле ввода данных в меню <header> */
-  /* маркированный список в навигационном меню <header><nav-bar> */
+  background-size: cover;
+  margin-bottom: 64px;
 }
 .header_index {
-  height: 735px;
   background-image: url(../../media/img/index_header.jpeg);
-  margin-bottom: 64px;
+  height: 735px;
 }
 .header_catalog {
+  background-image: url(../../media/img/catalog_header.jpeg);
   height: 400px;
-  background-image: url(../../media/img/category_header.jpeg);
-  margin-bottom: 61px;
 }
 .header_cart {
-  height: 400px;
   background-image: url(../../media/img/cart_header.jpeg);
-  margin-bottom: 64px;
+  height: 400px;
 }
-.header-nav-bar {
+.header__navbar {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  align-items: center;
+  padding: 17.5px 0;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
 }
-.header-nav-bar-mobile {
-  display: none;
+.header__search-block {
+  display: block;
 }
-.header-input {
+.header__search-form {
+  display: block;
+}
+.header__search-input {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
   width: 288px;
   height: 41px;
-  font-size: 16px;
-  text-indent: 32px;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+  padding: 0 16px;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
-  background: #ffffff;
-  background: transparent;
-  /* Псевдоэлемент ::placeholder для стилизации текста-подсказки (плейсхолдера) в полях ввода форм. 
-  Позволяет настраивать внешний вид текста, который отображается до ввода данных пользователем. */
+  color: rgb(255, 255, 255);
 }
-.header-input::placeholder {
-  color: #ffffff;
+.header__search-input::placeholder {
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0%;
+  line-height: 100%;
+  color: rgb(255, 255, 255);
 }
-.header-nav-list {
+.header__search-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.header__nav {
+  display: block;
+}
+.header__nav-list {
+  list-style: none;
   display: flex;
   gap: 32px;
-  list-style-type: none;
-  /* ссылки общие стили */
 }
-.header-nav-list__link {
-  font-size: 16px;
-  color: #ffffff;
-  line-height: 20px;
+.header__nav-icon {
+  display: none;
+}
+.header__nav-link {
   text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  /* Псевдокласс :hover применяется к элементам при наведении на них курсора мыши. 
-    Используется для создания интерактивных эффектов на веб-страницах. */
-}
-.header-nav-list__link:hover {
-  text-decoration: underline;
-  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-.header-nav-list__link:hover:hover {
-  color: rgb(136, 136, 136);
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 100%;
 }
-
-.content {
-  /* Стили flex контента <header> */
-}
-.content-header {
+.header__block-content {
   display: flex;
   flex-direction: column;
-  margin-top: 64px;
-  /* Заголовок контента в <header> */
-  /* Описание контента в <header> */
-  /* модификор ссылки в контенте <header> */
+  row-gap: 16px;
+  max-width: 765px;
 }
-.content-header_ctg {
-  margin-top: 127px;
+.header__block-content_index {
+  padding-top: 64px;
 }
-.content-header__title {
+.header__block-content_catalog {
+  padding-top: 128px;
+}
+.header__block-content_cart {
+  padding-top: 128px;
+}
+.header__title {
+  font-family: Montserrat;
   font-size: 64px;
   font-weight: 600;
   line-height: 70px;
-  margin-bottom: 16px;
-  max-width: 755px;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
-.content-header__description {
+.header__subtitle {
+  font-family: Montserrat;
   font-size: 24px;
+  font-weight: 400;
   line-height: 32px;
-  margin-bottom: 16px;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
-.content-header__link {
+.header__button {
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  text-decoration-line: underline;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
+}
+.header__button:hover {
   transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-.content-header__link:hover {
+.header__button:hover:hover {
   color: rgb(136, 136, 136);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+  text-decoration: none;
 }
 
 .footer {
+  padding: 0 calc((100% - 1200px) / 2);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 70px;
+  justify-content: space-between;
+  background: rgb(247, 246, 246);
   padding-top: 32px;
-  padding-bottom: 63px;
-  background-color: rgb(247, 246, 246);
+  padding-bottom: 59px;
+}
+.footer__block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 .footer__logo {
   display: block;
 }
-.footer-nav-bar {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.footer-nav-bar__title-nav {
+.footer__title {
+  font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;
-  line-height: 29px;
-  color: #000000;
+  line-height: 100%;
+  display: block;
+  color: rgb(0, 0, 0);
 }
-.footer-nav-list {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  gap: 12px;
-}
-.footer-nav-list .footer-nav-list__link {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 17px;
-  color: #888888;
-  text-decoration: none;
-}
-.footer-nav-list .footer-nav-list__link:hover {
-  text-decoration: underline;
-  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-.footer-nav-list .footer-nav-list__link:hover:hover {
-  color: rgb(136, 136, 136);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
-.footer-social-logo {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-.footer-social-logo__img {
-  width: 19px;
-  height: 18px;
-}
-.footer-social-logo__img:hover path {
-  transition: all 1s;
-  fill: rgb(0, 0, 0);
-}
-.footer-subscribe {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.footer-subscribe__text-info {
+.footer__title_news {
   font-size: 12px;
-  line-height: 15px;
-  text-align: left;
-  color: #000000;
 }
-.footer-form {
+.footer__navbar {
+  display: flex;
+  column-gap: 129px;
+}
+.footer__form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  row-gap: 8px;
 }
-.footer-form__input {
-  padding-left: 14px;
+.footer__form-input {
   width: 260px;
   height: 40px;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 18px;
-  color: #c4c4c4;
-  background: #ffffff;
-  border: 1px solid #c4c4c4;
   box-sizing: border-box;
-  border-radius: 20px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 16px;
+  background: rgb(255, 255, 255);
+  padding: 0 17px;
 }
-.footer-form__input::placeholder {
-  color: rgb(196, 196, 196);
+.footer__form-input::placeholder {
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 400;
-  line-height: 15px;
-  letter-spacing: 0%;
-  text-align: left;
+  line-height: 100%;
+  color: rgb(196, 196, 196);
 }
-.footer-form__button {
+.footer__form-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.footer__form-btn {
+  font-family: Montserrat;
   font-size: 12px;
-  line-height: 18px;
-  color: #000000;
-  background: rgba(222, 215, 215, 0.41);
-  border: 1px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 20px;
+  font-weight: 400;
+  line-height: 100%;
   width: 260px;
-  height: 46px;
+  height: 40px;
+  border: 0;
+  border-radius: 16px;
+  background: rgba(222, 215, 215, 0.41);
+}
+.footer__form-btn:hover {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
-.footer-form__button:hover {
+.footer__form-btn:hover:hover {
   color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
@@ -262,152 +204,281 @@ body {
   font-weight: 400;
   line-height: 100%;
 }
+.footer__nav-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.footer__nav-icons {
+  list-style-type: none;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+.footer__nav-link {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  text-decoration: none;
+  color: rgb(136, 136, 136);
+}
+
+select {
+  all: unset; /* Сбрасывает все стили */
+  border: none; /* Удаляем границу */
+  background: transparent; /* Прозрачное фоновое изображение */
+  background-color: transparent; /* Прозрачная заливка */
+  appearance: none; /* Стандартное свойство */
+  outline: none; /* Убираем выделение при фокусе */
+  box-shadow: none; /* Убираем тень */
+  padding: 0; /* Убираем отступы */
+  margin: 0; /* Убираем поля */
+}
 
 .content {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
-  gap: 32px;
+  padding: 0 calc((100% - 1200px) / 2);
   margin-bottom: 64px;
 }
 .content__title {
-  grid-column: 1/-1;
+  font-family: Montserrat;
   font-size: 48px;
   font-weight: 600;
-  line-height: 59px;
-  color: #000000;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
   margin-bottom: 32px;
 }
-.content_link {
-  margin-bottom: 64px;
+.content__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 48px;
+  column-gap: 32px;
 }
-.content_link a {
-  grid-column: 1/-1;
+.content__grid_for {
+  gap: 32px;
+}
+.content__link {
+  margin-top: 31px;
+}
+.content__link a {
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: #000000;
+  color: rgb(0, 0, 0);
+  text-decoration-line: underline;
+}
+.content__link a:hover {
   transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-.content_link a:hover {
+.content__link a:hover:hover {
   color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+.content__block-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.content__block-path {
+  display: flex;
+  column-gap: 10px;
+}
+.content__block-path * {
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 32px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
-
-.col {
+.content__block-btn {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  column-gap: 10px;
 }
-.col-xl {
-  grid-column: span 6;
+.content__btn {
+  position: relative;
+  max-width: 225px;
 }
-
-.row {
-  display: flex;
-  column-gap: 32px;
-  row-gap: 32px;
+.content__btn-select {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: left;
+  width: 182px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 20px;
+  padding: 10px 22px;
+}
+.content__btn-select:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.content__btn-select:hover:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.content__btn::after {
+  content: url("../../media/sprite/arrow-down.svg");
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+  font-size: 12px;
 }
 
 .card {
   position: relative;
   grid-column: span 4;
 }
-.card__img {
-  object-fit: contain;
+.card_for {
+  grid-column: span 4;
 }
-.card_big {
+.card_for-big {
   grid-column: span 6;
 }
-.card__title {
-  max-width: 379px;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 100%;
-  color: #000000;
-  margin-bottom: 9px;
+.card__row {
+  display: flex;
+  column-gap: 31px;
 }
-.card__title_cart {
-  margin-bottom: 14px;
+.card__body_for-cart {
+  max-width: 276px;
 }
-.card__title_center {
+.card_for-cart {
+  grid-column: span 5;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  border-top: 0.5px solid rgb(202, 205, 216);
+}
+.card__icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  opacity: 0;
+  z-index: 1;
+}
+.card__icon_buy {
+  left: calc(100% - 67px);
+  background-image: url("../../media/sprite/buy.svg");
+}
+.card__icon_like {
+  left: calc(100% - 34px);
+  background-image: url("../../media/sprite/like.svg");
+}
+.card:hover .card__icon {
+  opacity: 1;
+}
+.card__block-img {
+  position: relative;
+  margin-bottom: 8px;
+}
+.card__block-img_for {
+  margin-bottom: 0;
+}
+.card__block-img_for-cart {
+  margin-bottom: 0;
+}
+.card__block-title {
+  margin-bottom: 8px;
+}
+.card__block-title_abs-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-bottom: 0;
+}
+.card__block-title_for-cart {
+  margin-bottom: 14px;
+}
+.card__block-text {
+  margin-bottom: 12px;
+}
+.card__block-text_for-cart {
+  margin-bottom: 16px;
+}
+.card__block-price {
+  display: flex;
+  column-gap: 32px;
+  margin-bottom: 8px;
+}
+.card__block-price_for-cart {
+  margin-bottom: 15px;
+}
+.card__img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.card__title {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+}
+.card__title_for-center {
+  font-family: Montserrat;
   font-size: 34px;
   font-weight: 600;
-  line-height: 41px;
-  color: #ffffff;
+  line-height: 100%;
+  color: rgb(255, 255, 255);
 }
 .card__text {
-  max-width: 379px;
+  font-family: Montserrat;
   font-size: 14px;
   font-weight: 400;
   line-height: 100%;
-  color: #888888;
-  margin-bottom: 12px;
-}
-.card__text_cart {
-  max-width: 276px;
-  margin-bottom: 16px;
+  color: rgb(136, 136, 136);
 }
 .card__price {
-  column-gap: 32px;
-  row-gap: 32px;
-  max-width: 379px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;
-  line-height: 29px;
-  color: #050505;
+  line-height: 100%;
+  color: rgb(5, 5, 5);
 }
-.card__price_cart {
-  margin-bottom: 15px;
-}
-.card__price-sale {
+.card__price_sale {
+  color: rgb(136, 136, 136);
   text-decoration-line: line-through;
-  color: #888888;
 }
-.card__price_cart {
+.card__price_for-cart {
+  font-family: Montserrat;
   font-size: 16px;
-  line-height: 20px;
-}
-.card-cart {
-  grid-column: span 8;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-top: 0.5px solid rgb(202, 205, 216);
-  padding-top: 25px;
-  margin-bottom: 32px;
-}
-.card-cart:last-child {
-  margin-bottom: 50px;
+  font-weight: 500;
+  line-height: 100%;
 }
 .card__link {
   display: flex;
-  flex-direction: row;
   gap: 30px;
 }
 .card__link a {
+  font-family: Montserrat;
   font-size: 14px;
   font-weight: 400;
-  line-height: 210%;
+  line-height: 17px;
   color: #000000;
   margin-top: 15px;
-  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .card__link a:hover {
-  color: rgb(136, 136, 136);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-.card-counter {
+.card__link a:hover:hover {
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+.card__counter {
   width: 71px;
   height: 51px;
   font-size: 14px;
@@ -418,36 +489,322 @@ body {
   background: rgb(247, 246, 246);
   border: none;
 }
-.card_row {
-  display: flex;
-  column-gap: 32px;
-  row-gap: 32px;
-}
 
-.catalog-menu {
+.cart {
+  grid-column: span 8;
+}
+.cart__title {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-
-.path {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  list-style-type: none;
-  align-items: center;
   margin-bottom: 14px;
 }
-.path__text {
-  text-decoration: none;
+.cart__block-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 32px;
+}
+.cart__btn {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 50px;
+}
+.cart__btn button {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 200px;
+  height: 37px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #020202;
+  border-radius: 50px;
+}
+.cart__btn button:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.cart__btn button:hover:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.form-filter {
+  position: absolute;
+  top: 52px;
+  left: -360px;
+  display: flex;
+  flex-direction: column;
+  width: 541.5px;
+  box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+  background: rgb(255, 255, 255);
+  padding: 40px 48px;
+  z-index: 10;
+}
+.form-filter__block {
+  display: flex;
+  flex-direction: row;
+  column-gap: 65px;
+}
+.form-filter__block-items {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.form-filter__block-btn {
+  display: flex;
+  justify-content: end;
+}
+.form-filter__btn {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  width: 190px;
+  height: 40px;
+  border: 1px solid rgb(4, 4, 4);
+  border-radius: 16px;
+  background: rgba(222, 215, 215, 0.41);
+}
+.form-filter__btn:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.form-filter__btn:hover:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 190.5px;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+fieldset legend {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  color: rgb(5, 5, 5);
+  margin-bottom: 16px;
+}
+
+.range__block {
+  position: relative;
+  width: 190.5px;
+}
+.range__text {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
   color: rgb(0, 0, 0);
+}
+
+input[type=range] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1px; /* Толщина линии */
+  background: none;
+  outline: none;
+}
+input[type=range]:first-of-type {
+  background: rgb(0, 0, 0);
+}
+
+input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-moz-range-track,
+input[type=range]::-ms-track {
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+}
+
+input[type=radio] {
+  display: none; /* Скрываем стандартные радиокнопки */
+}
+input[type=radio] + label {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  position: relative; /* Устанавливаем относительное позиционирование метки */
+  padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+  cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+}
+input[type=radio] + label::before {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 0; /* Выравниваем по левой стороне метки */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  box-sizing: border-box;
+  width: 15px; /* Ширина стилизованного элемента */
+  height: 15px; /* Высота стилизованного элемента */
+  border: 1px solid rgb(136, 136, 136); /* Черная граница */
+  border-radius: 50%; /* Скругляем углы до состояния круга */
+  background: #fff; /* Белый фон внутри элемента */
+}
+input[type=radio]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+input[type=radio]:checked + label::before {
+  border: 1px solid rgb(0, 0, 0);
+}
+input[type=radio]:checked + label::after {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  width: 6.5px; /* Ширина элекмента внутри стилизованного элемента */
+  height: 6px; /* Высота элемента внутри стилизованного элемента */
+  background-image: url("../../media/sprite/V.svg");
+  background-size: cover;
+}
+
+input[type=checkbox] {
+  display: none; /* Скрываем стандартные радиокнопки */
+}
+input[type=checkbox] + label {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  position: relative; /* Устанавливаем относительное позиционирование метки */
+  padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+  cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+}
+input[type=checkbox] + label:empty {
+  padding-left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+input[type=checkbox] + label::before {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 0; /* Выравниваем по левой стороне метки */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  box-sizing: border-box;
+  width: 15px; /* Ширина стилизованного элемента */
+  height: 15px; /* Высота стилизованного элемента */
+  border: 1px solid rgb(136, 136, 136); /* Черная граница */
+  background: #ffffff; /* Белый фон внутри элемента */
+}
+input[type=checkbox]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+input[type=checkbox]:checked + label::before {
+  border: 1px solid rgb(0, 0, 0);
+}
+input[type=checkbox]:checked + label::after {
+  content: ""; /* Содержимое пусто, но стиль будет применен */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+  top: 50%; /* Центрируем по вертикали относительно метки */
+  transform: translateY(-50%); /* Поправка для точного центрирования */
+  width: 7px; /* Ширина элекмента внутри стилизованного элемента */
+  height: 7px; /* Высота элемента внутри стилизованного элемента */
+  background-image: url("../../media/sprite/V.svg");
+  background-size: cover;
+}
+
+#checkbox-1 + label::before {
+  background: #ffffff;
+}
+
+#checkbox-2 + label::before {
+  background: #000000;
+}
+
+#checkbox-3 + label::before {
+  background: #737373;
+}
+
+#checkbox-4 + label::before {
+  background: #ff0000;
+}
+
+#checkbox-5 + label::before {
+  background: #ff7a41;
+}
+
+#checkbox-6 + label::before {
+  background: #f2cb01;
+}
+
+#checkbox-7 + label::before {
+  background: #00bf2a;
+}
+
+#checkbox-8 + label::before {
+  background: #1ccc97;
+}
+
+#checkbox-9 + label::before {
+  background: #009fe3;
+}
+
+#checkbox-10 + label::before {
+  background: #000af8;
+}
+
+#checkbox-11 + label::before {
+  background: #6710d6;
+}
+
+#checkbox-12 + label::before {
+  background: #9d0db5;
+}
+
+#checkbox-13 + label::before {
+  background: #d89aff;
+}
+
+#checkbox-14 + label::before {
+  background: #ff65a6;
 }
 
 .form-pay {
   grid-column: span 4;
+  max-width: 379px;
   border-radius: 20px;
-  background: rgb(255, 255, 255);
+  background: rgb(247, 246, 246);
   display: flex;
   flex-direction: column;
   padding-top: 42px;
@@ -513,353 +870,11 @@ body {
   border-radius: 20px;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 .form-pay-btn__submit:hover {
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 20px;
-  background: rgb(0, 0, 0);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 100%;
-}
-
-.cart {
-  grid-column: span 8;
-}
-.cart__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 100%;
-  color: rgb(0, 0, 0);
-  margin-bottom: 14px;
-}
-.cart__header span {
-  padding-right: 27px;
-}
-.cart__btn {
-  grid-column: 1/-1;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-.cart__btn button {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  width: 200px;
-  height: 37px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  font-family: inherit;
-  box-sizing: border-box;
-  background-color: transparent;
-  border: 1px solid #020202;
-  border-radius: 50px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
-.cart__btn button:hover {
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 20px;
-  background: rgb(0, 0, 0);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 100%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-}
-
-.catalog-filter {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.drop-list {
-  width: 182px;
-  height: 40px;
-  border: 1px solid rgb(196, 196, 196);
-  border-radius: 20px;
-  appearance: none;
-  background: url(../../media/sprite/arrow_down.svg) no-repeat right 22px center;
-}
-.drop-list_filter {
-  width: 182px;
-}
-.drop-list_sort {
-  width: 227px;
-}
-.drop-list_text {
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  padding: 9px 54px 11px 23px;
-}
-
-.filter-content-drop {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: absolute;
-  top: 54px;
-  left: -360px;
-  width: 541.5px;
-  padding: 40px 48px 40px 48px;
-  column-gap: 65px;
-  row-gap: 38px;
-  background-color: white;
-  z-index: 1;
-}
-
-.fieldset {
-  border: 0 none;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 32px;
-  gap: 14px;
-}
-
-.fieldset:last-child {
-  margin-bottom: 0;
-}
-
-.fieldset-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.fieldset__legend {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #050505;
-  margin-bottom: 14px;
-}
-
-.fieldset__p {
-  margin-bottom: 14px;
-}
-
-.item {
-  margin-bottom: 14px;
-}
-
-.item:last-child {
-  margin-bottom: 0;
-}
-
-input[type=radio] {
-  display: none;
-}
-
-input[type=radio] + label {
-  position: relative;
-  padding-left: 25px;
-  cursor: pointer;
-}
-
-input[type=radio] + label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-input[type=radio]:checked + label::after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 0;
-  width: 15px;
-  height: 15px;
-  background-image: url("../../media/sprite/V.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.range-wrapper {
-  position: relative;
-}
-
-input[type=range] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: absolute;
-  width: 198.05px;
-  top: 0;
-  left: 0;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  height: 0;
-  border: 1px solid #000000;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  background-color: #000000;
-  margin-top: -4px;
-}
-
-input[type=checkbox] {
-  display: none;
-}
-
-input[type=checkbox] + label {
-  position: relative;
-  cursor: pointer;
-  padding-left: 25px;
-}
-
-input[type=checkbox] + label:empty {
-  padding-left: 15px;
-}
-
-input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border: 1px solid #000000;
-  transition: all 0.3s ease;
-}
-
-input[type=checkbox]:checked + label::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 15px;
-  height: 15px;
-  border: 1px solid #000000;
-  background-image: url("../../media/sprite/V.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#color-white + label::before {
-  background: #ffffff;
-  border: 1px solid #888888;
-}
-
-#color-black + label::before {
-  background: #000000;
-  border: 1px solid #000000;
-}
-
-#color-grey + label::before {
-  background: #737373;
-  border: 1px solid #737373;
-}
-
-#color-red + label::before {
-  background: #ff0000;
-  border: 1px solid #ff0000;
-}
-
-#color-orange + label::before {
-  background: #ff7a41;
-  border: 1px solid #ff7a41;
-}
-
-#color-yelow + label::before {
-  background: #f2cb01;
-  border: 1px solid #f2cb01;
-}
-
-#color-green + label::before {
-  background: #00bf2a;
-  border: 1px solid #00bf2a;
-}
-
-#color-ltgreen + label::before {
-  background: #1ccc97;
-  border: 1px solid #1ccc97;
-}
-
-#color-ltblue + label::before {
-  background: #009fe3;
-  border: 1px solid #009fe3;
-}
-
-#color-blue + label::before {
-  background: #000af8;
-  border: 1px solid #000af8;
-}
-
-#color-violet + label::before {
-  background: #6710d6;
-  border: 1px solid #6710d6;
-}
-
-#color-purple + label::before {
-  background: #9d0db5;
-  border: 1px solid #9d0db5;
-}
-
-#color-lilac + label::before {
-  background: #d89aff;
-  border: 1px solid #d89aff;
-}
-
-#color-pink + label::before {
-  background: #ff65a6;
-  border: 1px solid #ff65a6;
-}
-
-.filter-controls {
-  grid-column: 1/-1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.button-submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 190px;
-  height: 40px;
-  padding: 10px 76px 10px 76px;
-  border: 1px solid rgb(4, 4, 4);
-  border-radius: 20px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-.button-submit:hover {
+.form-pay-btn__submit:hover:hover {
   color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
@@ -870,138 +885,170 @@ input[type=checkbox]:checked + label::after {
 }
 
 @media (max-width: 1200px) {
-  .center {
+  .header {
     padding: 0 calc((100% - 786px) / 2);
+  }
+  .content {
+    padding: 0 calc((100% - 786px) / 2);
+  }
+  .content__grid {
+    row-gap: 30px;
+    column-gap: 29px;
   }
   .card {
     grid-column: span 6;
   }
-  .card-for__img {
-    height: 268px;
+  .card_for {
+    grid-column: span 4;
   }
-  .filter-content-drop {
-    top: 54px;
-    left: -124px;
+  .card_for-big {
+    grid-column: span 6;
   }
   .footer {
+    padding: 0 calc((100% - 786px) / 2);
     padding-top: 32px;
-    padding-bottom: 63px;
+    padding-bottom: 59px;
   }
   .footer__logo {
     display: none;
   }
+  .form-filter {
+    left: -124px;
+  }
   .cart {
     grid-column: 1/-1;
   }
-  .cart__btn button:last-of-type {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-  }
   .form-pay {
-    grid-column: span 6;
+    grid-column: 1/-1;
   }
 }
-@media (max-width: 767px) {
-  .center {
-    padding: 0 16px;
-  }
+@media (max-width: 768px) {
   .header {
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 32px;
+  }
+  .header__search-block {
+    display: none;
+  }
+  .header__navbar {
     padding-top: 32px;
+    border-bottom: none;
   }
-  .header-input {
+  .header__nav {
     display: none;
   }
-  .header-nav-list {
-    display: none;
-  }
-  .header-nav-bar-mobile {
+  .header__nav-icon {
     display: flex;
-    align-items: center;
-    gap: 32px;
+    column-gap: 32px;
   }
-  .logo {
-    width: 99px;
+  .header__icon {
+    display: block;
+    width: 19px;
+    height: 19px;
+    background-repeat: no-repeat;
+    opacity: 1;
   }
-  .content-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .header__icon_search {
+    background-image: url("../../media/sprite/search.svg");
   }
-  .content-header__title {
+  .header__icon_group {
+    background-image: url("../../media/sprite/group.svg");
+  }
+  .header__icon_cart {
+    background-image: url("../../media/sprite/cart.svg");
+  }
+  .header__content-box {
+    padding-top: 29px;
+  }
+  .header__title {
+    font-family: Montserrat;
     font-size: 48px;
-    line-height: 59px;
+    font-weight: 600;
+    line-height: 100%;
     text-align: center;
   }
-  .content-header__description {
+  .header__subtitle {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
     font-size: 16px;
+    font-weight: 400;
     line-height: 32px;
     text-align: center;
   }
-  .content-header__link {
+  .header__button {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
     font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
   }
-  .card {
-    grid-column: 1/-1;
-    max-width: 342px;
-  }
-  .card-for {
-    grid-column: 1/-1;
-  }
-  .card-for_big {
-    grid-column: 1/-1;
-  }
-  .card-for__img {
-    height: 243px;
-  }
-  .card-for__img-sm {
-    height: 375px;
-  }
-  .card__title_center {
-    font-size: 18px;
-  }
-  .card_cart {
-    max-width: none;
-  }
-  .form-pay {
-    grid-column: 1/-1;
-    width: 343px;
-  }
-  .form-pay__contact {
-    padding-right: 28px;
+  .footer {
+    padding-left: 17px;
+    padding-right: 17px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 70px;
   }
   .content {
-    justify-items: center;
-  }
-  .content_for {
-    gap: 16px;
+    padding: 0 17px;
+    margin-bottom: 32px;
   }
   .content__title {
-    justify-content: center;
+    font-family: Montserrat;
     font-size: 24px;
     font-weight: 600;
     line-height: 100%;
   }
-  .filter-content-drop {
-    grid-template-columns: 1fr;
-    width: 286px;
-    top: 105px;
-    left: 0;
+  .content__grid {
+    row-gap: 32px;
   }
-  .filter-controls {
-    justify-content: center;
+  .content__block-nav {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 14px;
   }
-  .cart__btn button {
-    width: 163px;
+  .content__block-btn {
+    flex-direction: column;
+    row-gap: 10px;
   }
-}
-@media (max-width: 495px) {
   .card {
     grid-column: 1/-1;
   }
-  .card__img_none {
+  .card_for {
+    grid-column: 1/-1;
+  }
+  .card_for-big {
+    grid-column: 1/-1;
+  }
+  .card__title {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .card__title_for-center {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+  .card__price {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .card__block-img_for-cart {
     display: none;
   }
-  .form-pay form {
-    max-width: 300px;
+  .form-filter {
+    left: 0;
+    top: 106px;
+    width: 286.5px;
+  }
+  .form-filter__block {
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,48 +1,41 @@
 @media (max-width: 1200px) {
-    .center {
-        padding: 0 calc((100% - 786px) / 2);
+  $screen-width-px: 786px;
+  .header {
+    @include padding-adaptive($screen-width-px);
+  }
+  .content {
+    @include padding-adaptive($screen-width-px);
+    &__grid {
+      row-gap: 30px;
+      column-gap: 29px;
     }
-
-    .card {
+  }
+  .card {
+    grid-column: span 6;
+    &_for {
+      grid-column: span 4;
+      &-big {
         grid-column: span 6;
-
-        &-for {
-            &__img {
-                height: 268px;
-            }
-        }
+      }
     }
-
-    .filter-content-drop {
-        top: 54px;
-        left: -124px;
-
+  }
+  .footer {
+    @include padding-adaptive($screen-width-px);
+    padding-top: 32px;
+    padding-bottom: 59px;
+    &__logo {
+      display: none;
     }
-
-    .footer {
-        padding-top: 32px;
-        padding-bottom: 63px;
-
-        &__logo {
-            display: none;
-        }
+  }
+  .form {
+    &-filter {
+      left: -124px;
     }
-
-    .cart {
-        grid-column: 1 / -1;
-
-        &__btn {
-
-            & button {
-                &:last-of-type {
-                    background: rgba(0, 0, 0, 1);
-                    color: rgba(255, 255, 255, 1);
-                }
-            }
-        }
-    }
-
-    .form-pay {
-        grid-column: span 6;
-    }
+  }
+  .cart {
+    grid-column: 1 / -1;
+  }
+  .form-pay {
+    grid-column: 1 / -1;
+  }
 }

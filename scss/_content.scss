@@ -1,155 +1,215 @@
-.content {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
-  gap: 32px;
-  margin-bottom: 64px;
+select {
+  all: unset; /* Сбрасывает все стили */
+  border: none; /* Удаляем границу */
+  background: transparent; /* Прозрачное фоновое изображение */
+  background-color: transparent; /* Прозрачная заливка */
+  appearance: none; /* Стандартное свойство */
+  outline: none; /* Убираем выделение при фокусе */
+  box-shadow: none; /* Убираем тень */
+  padding: 0; /* Убираем отступы */
+  margin: 0; /* Убираем поля */
+}
 
+.content {
+  @include padding-adaptive($screen-width-px);
+  margin-bottom: 64px;
   &__title {
-    grid-column: 1 / -1;
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 59px;
-    color: #000000;
+    @include font-montserrat(48px, 600, 100%);
+    color: rgba(0, 0, 0, 1);
     margin-bottom: 32px;
   }
-
-  &_link {
-    margin-bottom: 64px;
-
-    & a {
-      grid-column: 1 / -1;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      color: #000000;
-      @include hover-link;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 48px;
+    column-gap: 32px;
+    &_for {
+      gap: 32px;
     }
   }
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-
-  &-xl {
-    grid-column: span 6;
+  &__link {
+    margin-top: 31px;
+    & a {
+      @include font-montserrat(16px, 400, 24px);
+      color: rgba(0, 0, 0, 1);
+      text-decoration-line: underline;
+      &:hover {
+        @include hover-link;
+      }
+    }
   }
-}
-
-.row {
-  display: flex;
-  column-gap: 32px;
-  row-gap: 32px;
+  &__block {
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-path {
+      display: flex;
+      column-gap: 10px;
+      & * {
+        @include font-montserrat(16px, 400, 32px);
+        color: rgba(0, 0, 0, 1);
+        text-decoration: none;
+      }
+    }
+    &-btn {
+      position: relative;
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+  &__btn {
+    position: relative;
+    max-width: 225px;
+    &-select {
+      @include font-montserrat(16px, 400, 100%);
+      text-align: left;
+      width: 182px;
+      border: 1px solid rgba(196, 196, 196, 1);
+      border-radius: 20px;
+      padding: 10px 22px;
+      &:hover {
+        @include hover-btn;
+      }
+    }
+    &::after {
+      content: url("../../media/sprite/arrow-down.svg");
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: #666;
+      font-size: 12px;
+    }
+  }
 }
 
 .card {
   position: relative;
   grid-column: span 4;
-
-  &__img {
-    object-fit: contain;
-  }
-
-  &_big {
-    grid-column: span 6;
-  }
-
-  &__title {
-    max-width: 379px;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 100%;
-    color: #000000;
-    margin-bottom: 9px;
-
-    &_cart {
-      margin-bottom: 14px;
-    }
-
-    &_center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 34px;
-      font-weight: 600;
-      line-height: 41px;
-      color: #ffffff;
+  &_for {
+    grid-column: span 4;
+    &-big {
+      grid-column: span 6;
     }
   }
-
-  &__text {
-    max-width: 379px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 100%;
-    color: #888888;
-    margin-bottom: 12px;
-
-    &_cart {
+  &__row {
+    display: flex;
+    column-gap: 31px;
+  }
+  &__body {
+    &_for-cart {
       max-width: 276px;
-      margin-bottom: 16px;
     }
   }
-
-  &__price {
-    column-gap: 32px;
-    row-gap: 32px;
-    max-width: 379px;
+  &_for-cart {
+    grid-column: span 5;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 29px;
-    color: #050505;
-
-    &_cart {
-      margin-bottom: 15px;
-    }
-
-    &-sale {
-      text-decoration-line: line-through;
-      color: #888888;
-    }
-
-    &_cart {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  &-cart {
-    grid-column: span 8;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    border-top: 0.5px solid rgba(202, 205, 216, 1);
     padding-top: 25px;
-    margin-bottom: 32px;
-
-    &:last-child {
-      margin-bottom: 50px;
+    border-top: 0.5px solid rgba(202, 205, 216, 1);
+  }
+  &__icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    opacity: 0;
+    z-index: 1;
+    &_buy {
+      left: calc(100% - 67px);
+      background-image: url("../../media/sprite/buy.svg");
+    }
+    &_like {
+      left: calc(100% - 34px);
+      background-image: url("../../media/sprite/like.svg");
     }
   }
-
+  &:hover &__icon {
+    opacity: 1;
+  }
+  &__block {
+    &-img {
+      position: relative;
+      margin-bottom: 8px;
+      &_for {
+        margin-bottom: 0;
+      }
+      &_for-cart {
+        margin-bottom: 0;
+      }
+    }
+    &-title {
+      margin-bottom: 8px;
+      &_abs-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: 0;
+      }
+      &_for-cart {
+        margin-bottom: 14px;
+      }
+    }
+    &-text {
+      margin-bottom: 12px;
+      &_for-cart {
+        margin-bottom: 16px;
+      }
+    }
+    &-price {
+      display: flex;
+      column-gap: 32px;
+      margin-bottom: 8px;
+      &_for-cart {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__title {
+    @include font-montserrat(24px, 500, 100%);
+    color: rgba(0, 0, 0, 1);
+    &_for-center {
+      @include font-montserrat(34px, 600, 100%);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  &__text {
+    @include font-montserrat(14px, 400, 100%);
+    color: rgba(136, 136, 136, 1);
+  }
+  &__price {
+    @include font-montserrat(24px, 500, 100%);
+    color: rgba(5, 5, 5, 1);
+    &_sale {
+      color: rgba(136, 136, 136, 1);
+      text-decoration-line: line-through;
+    }
+    &_for-cart {
+      @include font-montserrat(16px, 500, 100%);
+    }
+  }
   &__link {
     display: flex;
-    flex-direction: row;
     gap: 30px;
-
     & a {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 210%;
+      @include font-montserrat(14px, 400, 17px);
       color: #000000;
       margin-top: 15px;
-      @include hover-link;
+      &:hover {
+        @include hover-link;
+      }
     }
   }
-
-  &-counter {
+  &__counter {
     width: 71px;
     height: 51px;
     font-size: 14px;
@@ -160,39 +220,309 @@
     background: rgb(247, 246, 246);
     border: none;
   }
-
-  &_row {
+}
+.cart {
+  grid-column: span 8;
+  &__title {
     display: flex;
-    column-gap: 32px;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  &__block-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     row-gap: 32px;
   }
-}
+  &__btn {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 50px;
 
-.catalog-menu {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-
-.path {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  list-style-type: none;
-  align-items: center;
-  margin-bottom: 14px;
-
-  &__text {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+    & button {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      width: 200px;
+      height: 37px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      font-family: inherit;
+      box-sizing: border-box;
+      background-color: transparent;
+      border: 1px solid #020202;
+      border-radius: 50px;
+      &:hover {
+        @include hover-btn;
+      }
+    }
   }
+}
+
+// fieldset,
+// legend,
+// input,
+// label {
+//   all: unset; /* Сброс всех стилей */
+// }
+
+.form {
+  &-filter {
+    position: absolute;
+    top: 52px;
+    left: -360px;
+    display: flex;
+    flex-direction: column;
+    width: 541.5px;
+    box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 1);
+    padding: 40px 48px;
+    z-index: 10;
+
+    &__block {
+      display: flex;
+      flex-direction: row;
+      column-gap: 65px;
+    }
+    &__block-items {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    &__block-btn {
+      display: flex;
+      justify-content: end;
+    }
+    &__btn {
+      @include font-montserrat(16px, 400, 100%);
+      width: 190px;
+      height: 40px;
+      border: 1px solid rgba(4, 4, 4, 1);
+      border-radius: 16px;
+      background: rgba(222, 215, 215, 0.41);
+      &:hover {
+        @include hover-btn;
+      }
+    }
+  }
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 190.5px;
+  gap: 14px;
+  margin-bottom: 32px;
+  & legend {
+    @include font-montserrat(16px, 500, 100%);
+    color: rgba(5, 5, 5, 1);
+    margin-bottom: 16px;
+  }
+}
+
+.range {
+  &__block {
+    position: relative;
+    width: 190.5px;
+  }
+  &__text {
+    @include font-montserrat(14px, 400, 100%);
+    color: rgba(0, 0, 0, 1);
+  }
+}
+input[type="range"] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1px; /* Толщина линии */
+  background: none;
+  outline: none;
+  &:first-of-type {
+    background: rgba(0, 0, 0, 1);
+  }
+}
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track,
+input[type="range"]::-ms-track {
+  border: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 1);
+}
+
+input[type="radio"] {
+  display: none; /* Скрываем стандартные радиокнопки */
+  + label {
+    @include font-montserrat(14px, 400, 100%);
+    color: rgba(0, 0, 0, 1);
+    position: relative; /* Устанавливаем относительное позиционирование метки */
+    padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+    cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+    &::before {
+      content: ""; /* Содержимое пусто, но стиль будет применен */
+      position: absolute; /* Устанавливаем абсолютное позиционирование */
+      left: 0; /* Выравниваем по левой стороне метки */
+      top: 50%; /* Центрируем по вертикали относительно метки */
+      transform: translateY(-50%); /* Поправка для точного центрирования */
+      box-sizing: border-box;
+      width: 15px; /* Ширина стилизованного элемента */
+      height: 15px; /* Высота стилизованного элемента */
+      border: 1px solid rgba(136, 136, 136, 1); /* Черная граница */
+      border-radius: 50%; /* Скругляем углы до состояния круга */
+      background: #fff; /* Белый фон внутри элемента */
+
+      // При фокусе
+      @at-root input[type="radio"]:focus + label::before {
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+      }
+
+      // При выборе
+      @at-root input[type="radio"]:checked + label {
+        &::before {
+          border: 1px solid rgba(0, 0, 0, 1);
+        }
+        &::after {
+          content: ""; /* Содержимое пусто, но стиль будет применен */
+          position: absolute; /* Устанавливаем абсолютное позиционирование */
+          left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+          top: 50%; /* Центрируем по вертикали относительно метки */
+          transform: translateY(-50%); /* Поправка для точного центрирования */
+          width: 6.5px; /* Ширина элекмента внутри стилизованного элемента */
+          height: 6px; /* Высота элемента внутри стилизованного элемента */
+          background-image: url("../../media/sprite/V.svg");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+input[type="checkbox"] {
+  display: none; /* Скрываем стандартные радиокнопки */
+  + label {
+    @include font-montserrat(14px, 400, 100%);
+    color: rgba(0, 0, 0, 1);
+    position: relative; /* Устанавливаем относительное позиционирование метки */
+    padding-left: 25px; /* Добавляем отступ слева для размещения стилизованного элемента */
+    cursor: pointer; /* Меняем курсор мыши при наведении на метку */
+    &:empty {
+      padding-left: 0;
+      display: block;
+      width: 15px;
+      height: 15px;
+    }
+    &::before {
+      content: ""; /* Содержимое пусто, но стиль будет применен */
+      position: absolute; /* Устанавливаем абсолютное позиционирование */
+      left: 0; /* Выравниваем по левой стороне метки */
+      top: 50%; /* Центрируем по вертикали относительно метки */
+      transform: translateY(-50%); /* Поправка для точного центрирования */
+      box-sizing: border-box;
+      width: 15px; /* Ширина стилизованного элемента */
+      height: 15px; /* Высота стилизованного элемента */
+      border: 1px solid rgba(136, 136, 136, 1); /* Черная граница */
+      background: #ffffff; /* Белый фон внутри элемента */
+
+      // При фокусе
+      @at-root input[type="checkbox"]:focus + label::before {
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+      }
+
+      // При выборе
+      @at-root input[type="checkbox"]:checked + label {
+        &::before {
+          border: 1px solid rgba(0, 0, 0, 1);
+        }
+        &::after {
+          content: ""; /* Содержимое пусто, но стиль будет применен */
+          position: absolute; /* Устанавливаем абсолютное позиционирование */
+          left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+          top: 50%; /* Центрируем по вертикали относительно метки */
+          transform: translateY(-50%); /* Поправка для точного центрирования */
+          width: 7px; /* Ширина элекмента внутри стилизованного элемента */
+          height: 7px; /* Высота элемента внутри стилизованного элемента */
+          background-image: url("../../media/sprite/V.svg");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+#checkbox-1 + label::before {
+  background: #ffffff;
+}
+
+#checkbox-2 + label::before {
+  background: #000000;
+}
+
+#checkbox-3 + label::before {
+  background: #737373;
+}
+
+#checkbox-4 + label::before {
+  background: #ff0000;
+}
+
+#checkbox-5 + label::before {
+  background: #ff7a41;
+}
+
+#checkbox-6 + label::before {
+  background: #f2cb01;
+}
+
+#checkbox-7 + label::before {
+  background: #00bf2a;
+}
+
+#checkbox-8 + label::before {
+  background: #1ccc97;
+}
+
+#checkbox-9 + label::before {
+  background: #009fe3;
+}
+
+#checkbox-10 + label::before {
+  background: #000af8;
+}
+
+#checkbox-11 + label::before {
+  background: #6710d6;
+}
+
+#checkbox-12 + label::before {
+  background: #9d0db5;
+}
+
+#checkbox-13 + label::before {
+  background: #d89aff;
+}
+
+#checkbox-14 + label::before {
+  background: #ff65a6;
 }
 
 .form-pay {
   grid-column: span 4;
+  max-width: 379px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(247, 246, 246, 1);
   display: flex;
   flex-direction: column;
   padding-top: 42px;
@@ -263,52 +593,9 @@
       border-radius: 20px;
       justify-content: center;
       align-items: center;
-      @include hover-btn;
-    }
-  }
-}
-
-.cart {
-  grid-column: span 8;
-
-  &__header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 100%;
-    color: rgb(0, 0, 0);
-    margin-bottom: 14px;
-
-    & span {
-      padding-right: 27px;
-    }
-  }
-
-  &__btn {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 7px;
-
-    & button {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center;
-      width: 200px;
-      height: 37px;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 17px;
-      font-family: inherit;
-      box-sizing: border-box;
-      background-color: transparent;
-      border: 1px solid #020202;
-      border-radius: 50px;
-      @include hover-btn;
+      &:hover {
+        @include hover-btn;
+      }
     }
   }
 }

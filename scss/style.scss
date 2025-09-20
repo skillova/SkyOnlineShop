@@ -1,299 +1,196 @@
-$color-input: #ffffff;
-$color-border: #cacdd8;
-$color-title: #000000;
+@import "mixins";
 
-@mixin hover-btn() {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease,
-    transform 0.2s ease;
-
-  &:hover {
-    color: rgba(255, 255, 255, 1);
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 1);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 100%;
-  }
-}
-
-@mixin hover-link() {
-  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
-
-  &:hover {
-    color: rgba(136, 136, 136, 1);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-}
+$screen-width-px: 1200px;
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
-/* Центрирование контента расчетными отступами */
-.center {
-  padding: 0 calc((100% - 1200px) / 2);
-}
-
-/* header общие настройки */
 .header {
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
+  @include padding-adaptive($screen-width-px);
+  background-repeat: no-repeat;
   background-position: center;
-
-  /* header главная страница */
+  background-size: cover;
+  margin-bottom: 64px;
   &_index {
-    height: 735px;
     background-image: url(../../media/img/index_header.jpeg);
-    margin-bottom: 64px;
+    height: 735px;
   }
-
   &_catalog {
+    background-image: url(../../media/img/catalog_header.jpeg);
     height: 400px;
-    background-image: url(../../media/img/category_header.jpeg);
-    margin-bottom: 61px;
   }
-
   &_cart {
-    height: 400px;
     background-image: url(../../media/img/cart_header.jpeg);
-    margin-bottom: 64px;
+    height: 400px;
   }
-
-  /* Навигационное меню в <header> */
-  &-nav-bar {
+  // &__logo {
+  // }
+  &__navbar {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border-bottom: 0.5px solid #ffffffcc;
-
-    &-mobile {
-      display: none;
-    }
+    align-items: center;
+    padding: 17.5px 0;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
   }
-
-  /* Поле ввода данных в меню <header> */
-  &-input {
+  &__search-block {
+    display: block;
+  }
+  &__search-form {
+    display: block;
+  }
+  &__search-input {
+    @include font-montserrat(16px, 400, 100%);
     width: 288px;
     height: 41px;
-    font-size: 16px;
-    text-indent: 32px;
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    padding: 0 16px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 20px;
-    background: #ffffff;
-    background: transparent;
-
-    /* Псевдоэлемент ::placeholder для стилизации текста-подсказки (плейсхолдера) в полях ввода форм. 
-    Позволяет настраивать внешний вид текста, который отображается до ввода данных пользователем. */
+    color: rgba(255, 255, 255, 1);
     &::placeholder {
-      color: #ffffff;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0%;
+      @include font-montserrat(16px, 400, 100%);
+      color: rgba(255, 255, 255, 1);
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
     }
   }
-
-  /* маркированный список в навигационном меню <header><nav-bar> */
-  &-nav-list {
-    display: flex;
-    gap: 32px;
-    list-style-type: none;
-
-    /* ссылки общие стили */
-    &__link {
-      font-size: 16px;
-      color: #ffffff;
-      line-height: 20px;
-      text-decoration: none;
+  &__nav {
+    display: block;
+    &-list {
+      list-style: none;
       display: flex;
-      flex-direction: row;
-
-      /* Псевдокласс :hover применяется к элементам при наведении на них курсора мыши. 
-        Используется для создания интерактивных эффектов на веб-страницах. */
-      &:hover {
-        text-decoration: underline;
-        @include hover-link;
-      }
+      gap: 32px;
+    }
+    &-icon {
+      display: none;
+    }
+    // &-item {
+    // }
+    &-link {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 1);
+      @include font-montserrat(16px, 400, 100%);
     }
   }
-}
-
-.content {
-  /* Стили flex контента <header> */
-  &-header {
+  &__block-content {
     display: flex;
     flex-direction: column;
-    margin-top: 64px;
-
-    &_ctg {
-      margin-top: 127px;
+    row-gap: 16px;
+    max-width: 765px;
+    &_index {
+      padding-top: 64px;
     }
-
-    /* Заголовок контента в <header> */
-    &__title {
-      font-size: 64px;
-      font-weight: 600;
-      line-height: 70px;
-      margin-bottom: 16px;
-      max-width: 755px;
-      color: #ffffff;
+    &_catalog {
+      padding-top: 128px;
     }
-
-    /* Описание контента в <header> */
-    &__description {
-      font-size: 24px;
-      line-height: 32px;
-      margin-bottom: 16px;
-      color: #ffffff;
+    &_cart {
+      padding-top: 128px;
     }
-
-    /* модификор ссылки в контенте <header> */
-    &__link {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      text-decoration-line: underline;
-      color: #ffffff;
-      @include hover-link;
-    }
+  }
+  &__title {
+    @include font-montserrat(64px, 600, 70px);
+    color: rgba(255, 255, 255, 1);
+  }
+  &__subtitle {
+    @include font-montserrat(24px, 400, 32px);
+    color: rgba(255, 255, 255, 1);
+  }
+  &__button {
+    @include font-montserrat(16px, 400, 24px);
+    color: rgba(255, 255, 255, 1);
+      &:hover {
+        @include hover-link;
+      }
   }
 }
 
 .footer {
+  @include padding-adaptive($screen-width-px);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 70px;
+  justify-content: space-between;
+  background: rgba(247, 246, 246, 1);
   padding-top: 32px;
-  padding-bottom: 63px;
-  background-color: rgb(247, 246, 246);
-
+  padding-bottom: 59px;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
   &__logo {
     display: block;
   }
-
-  &-nav-bar {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    &__title-nav {
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 29px;
-      color: #000000;
-    }
-  }
-
-  &-nav-list {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    gap: 12px;
-
-    .footer-nav-list__link {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 17px;
-      color: #888888;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-        @include hover-link;
-      }
-    }
-  }
-
-  &-social-logo {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-
-    &__img {
-      width: 19px;
-      height: 18px;
-
-      &:hover path {
-        transition: all 1s;
-        fill: rgba(0, 0, 0, 1);
-      }
-    }
-  }
-
-  &-subscribe {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    &__text-info {
+  &__title {
+    @include font-montserrat(24px, 500, 100%);
+    display: block;
+    color: rgba(0, 0, 0, 1);
+    &_news {
       font-size: 12px;
-      line-height: 15px;
-      text-align: left;
-      color: #000000;
     }
   }
-
-  &-form {
+  &__navbar {
+    display: flex;
+    column-gap: 129px;
+  }
+  &__form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-
-    &__input {
-      padding-left: 14px;
+    row-gap: 8px;
+    &-input {
       width: 260px;
       height: 40px;
-      font-size: 15px;
-      font-weight: normal;
-      line-height: 18px;
-      color: #c4c4c4;
-      background: #ffffff;
-      border: 1px solid #c4c4c4;
       box-sizing: border-box;
-      border-radius: 20px;
-
+      border: 1px solid rgba(196, 196, 196, 1);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 1);
+      padding: 0 17px;
       &::placeholder {
-        color: rgb(196, 196, 196);
-        font-family: Montserrat;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 15px;
-        letter-spacing: 0%;
-        text-align: left;
+        @include font-montserrat(12px, 400, 100%);
+        color: rgba(196, 196, 196, 1);
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
       }
     }
-
-    &__button {
-      font-size: 12px;
-      line-height: 18px;
-      color: #000000;
-      background: rgba(222, 215, 215, 0.41);
-      border: 1px solid #ffffff;
-      box-sizing: border-box;
-      border-radius: 20px;
+    &-btn {
+      @include font-montserrat(12px, 400, 100%);
       width: 260px;
-      height: 46px;
-      @include hover-btn;
+      height: 40px;
+      border: 0;
+      border-radius: 16px;
+      background: rgba(222, 215, 215, 0.41);
+      &:hover {
+        @include hover-btn;
+      }
+    }
+  }
+  &__nav {
+    &-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+    &-icons {
+      list-style-type: none;
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+    }
+    &-link {
+      @include font-montserrat(14px, 500, 100%);
+      text-decoration: none;
+      color: rgba(136, 136, 136, 1);
     }
   }
 }
 
 @import "content";
-@import "drop_filter";
 @import "tablet";
 @import "mobile";

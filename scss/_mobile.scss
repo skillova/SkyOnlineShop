@@ -1,146 +1,114 @@
-@media (max-width: 767px) {
-    .center {
-        padding: 0 16px;
+@media (max-width: 768px) {
+  .header {
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 32px;
+    &__search-block {
+      display: none;
     }
-
-    .header {
-        padding-top: 32px;
-
-        &-input {
-            display: none;
-        }
-
-        &-nav-list {
-            display: none;
-        }
-
-        &-nav-bar {
-            &-mobile {
-                display: flex;
-                align-items: center;
-                gap: 32px;
-            }
-        }
+    &__navbar {
+      padding-top: 32px;
+      border-bottom: none;
     }
-
-    .logo {
-        width: 99px;
-    }
-
-    .content-header {
+    &__nav {
+      display: none;
+      &-icon {
         display: flex;
+        column-gap: 32px;
+      }
+    }
+    &__icon {
+      display: block;
+      width: 19px;
+      height: 19px;
+      background-repeat: no-repeat;
+      opacity: 1;
+      &_search {
+        background-image: url("../../media/sprite/search.svg");
+      }
+      &_group {
+        background-image: url("../../media/sprite/group.svg");
+      }
+      &_cart {
+        background-image: url("../../media/sprite/cart.svg");
+      }
+    }
+    &__content-box {
+      padding-top: 29px;
+    }
+    &__title {
+      @include font-montserrat(48px, 600, 100%);
+      text-align: center;
+    }
+    &__subtitle {
+      color: rgba(255, 255, 255, 1);
+      @include font-montserrat(16px, 400, 32px);
+      text-align: center;
+    }
+    &__button {
+      color: rgba(255, 255, 255, 1);
+      @include font-montserrat(14px, 400, 24px);
+      text-align: center;
+    }
+  }
+  .footer {
+    padding-left: 17px;
+    padding-right: 17px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 70px;
+  }
+  .content {
+    padding: 0 17px;
+    margin-bottom: 32px;
+    &__title {
+      @include font-montserrat(24px, 600, 100%);
+    }
+    &__grid {
+      row-gap: 32px;
+    }
+    &__block {
+      &-nav {
         flex-direction: column;
-        align-items: center;
-
-        &__title {
-            font-size: 48px;
-            line-height: 59px;
-            text-align: center;
-        }
-
-        &__description {
-            font-size: 16px;
-            line-height: 32px;
-            text-align: center;
-        }
-
-        &__link {
-            font-size: 14px;
-        }
+        column-gap: 0;
+        row-gap: 14px;
+      }
+      &-btn {
+        flex-direction: column;
+        row-gap: 10px;
+      }
     }
-
-    .card {
+  }
+  .card {
+    grid-column: 1 / -1;
+    &_for {
+      grid-column: 1 / -1;
+      &-big {
         grid-column: 1 / -1;
-        max-width: 342px;
-
-        &-for {
-            grid-column: 1 / -1;
-
-            &_big {
-                grid-column: 1 / -1;
-            }
-
-            &__img {
-                height: 243px;
-            }
-
-            &__img-sm {
-                height: 375px;
-            }
-        }
-
-        &__title {
-
-            &_center {
-                font-size: 18px;
-            }
-        }
-
-        &_cart {
-            max-width: none;
-        }
+      }
     }
-
-    .form-pay {
-        grid-column: 1 / -1;
-        width: 343px;
-
-        &__contact {
-            padding-right: 28px;
-        }
+    &__title {
+      @include font-montserrat(18px, 500, 100%);
+      &_for-center {
+        @include font-montserrat(28px, 600, 100%);
+      }
     }
-
-    .content {
-        justify-items: center;
-
-        &_for {
-            gap: 16px;
-        }
-
-        &__title {
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 100%;
-        }
+    &__price {
+      @include font-montserrat(18px, 500, 100%);
     }
-
-    .filter {
-
-        &-content-drop {
-            grid-template-columns: 1fr;
-            width: 286px;
-            top: 105px;
-            left: 0;
-
-        }
-
-        &-controls {
-            justify-content: center;
-        }
+    &__block-img {
+      &_for-cart {display: none;
+      }
     }
-
-    .cart {
-        &__btn {
-            & button {
-                width: 163px;
-            }
-        }
+  }
+  .form {
+    &-filter {
+      left: 0;
+      top: 106px;
+      width: 286.5px;
+      &__block {
+        flex-wrap: wrap;
+      }
     }
-}
-
-@media (max-width: 495px) {
-    .card {
-        grid-column: 1 / -1;
-
-        &__img {
-            &_none {
-                display: none;
-            }
-        }
-    }
-
-    .form-pay form {
-        max-width: 300px;
-    }
+  }
 }
