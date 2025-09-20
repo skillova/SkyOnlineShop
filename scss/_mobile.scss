@@ -88,13 +88,17 @@
       }
     }
     &__title {
-      @include font-montserrat(28px, 500, 100%);
+      @include font-montserrat(18px, 500, 100%);
       &_for-center {
         @include font-montserrat(28px, 600, 100%);
       }
     }
     &__price {
       @include font-montserrat(18px, 500, 100%);
+    }
+    &__block-img {
+      &_for-cart {display: none;
+      }
     }
   }
   .form {

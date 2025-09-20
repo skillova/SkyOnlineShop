@@ -20,6 +20,10 @@
   background-image: url(../../media/img/catalog_header.jpeg);
   height: 400px;
 }
+.header_cart {
+  background-image: url(../../media/img/cart_header.jpeg);
+  height: 400px;
+}
 .header__navbar {
   display: flex;
   justify-content: space-between;
@@ -45,13 +49,6 @@
   box-sizing: border-box;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
-  color: rgb(255, 255, 255);
-}
-.header__search-input::-moz-placeholder {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 100%;
   color: rgb(255, 255, 255);
 }
 .header__search-input::placeholder {
@@ -94,6 +91,9 @@
   padding-top: 64px;
 }
 .header__block-content_catalog {
+  padding-top: 128px;
+}
+.header__block-content_cart {
   padding-top: 128px;
 }
 .header__title {
@@ -147,8 +147,7 @@
 }
 .footer__navbar {
   display: flex;
-  -moz-column-gap: 129px;
-       column-gap: 129px;
+  column-gap: 129px;
 }
 .footer__form {
   display: flex;
@@ -163,13 +162,6 @@
   border-radius: 16px;
   background: rgb(255, 255, 255);
   padding: 0 17px;
-}
-.footer__form-input::-moz-placeholder {
-  font-family: Montserrat;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 100%;
-  color: rgb(196, 196, 196);
 }
 .footer__form-input::placeholder {
   font-family: Montserrat;
@@ -202,8 +194,7 @@
 .footer__nav-icons {
   list-style-type: none;
   display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   align-items: center;
 }
 .footer__nav-link {
@@ -220,9 +211,7 @@ select {
   border: none; /* Удаляем границу */
   background: transparent; /* Прозрачное фоновое изображение */
   background-color: transparent; /* Прозрачная заливка */
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; /* Стандартное свойство */
+  appearance: none; /* Стандартное свойство */
   outline: none; /* Убираем выделение при фокусе */
   box-shadow: none; /* Убираем тень */
   padding: 0; /* Убираем отступы */
@@ -245,8 +234,7 @@ select {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   row-gap: 48px;
-  -moz-column-gap: 32px;
-       column-gap: 32px;
+  column-gap: 32px;
 }
 .content__grid_for {
   gap: 32px;
@@ -268,8 +256,7 @@ select {
 }
 .content__block-path {
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 .content__block-path * {
   font-family: Montserrat;
@@ -282,8 +269,7 @@ select {
 .content__block-btn {
   position: relative;
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 .content__btn {
   position: relative;
@@ -321,6 +307,20 @@ select {
 .card_for-big {
   grid-column: span 6;
 }
+.card__row {
+  display: flex;
+  column-gap: 31px;
+}
+.card__body_for-cart {
+  max-width: 276px;
+}
+.card_for-cart {
+  grid-column: span 5;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  border-top: 0.5px solid rgb(202, 205, 216);
+}
 .card__icon {
   position: absolute;
   width: 24px;
@@ -347,6 +347,9 @@ select {
 .card__block-img_for {
   margin-bottom: 0;
 }
+.card__block-img_for-cart {
+  margin-bottom: 0;
+}
 .card__block-title {
   margin-bottom: 8px;
 }
@@ -357,22 +360,28 @@ select {
   transform: translate(-50%, -50%);
   margin-bottom: 0;
 }
+.card__block-title_for-cart {
+  margin-bottom: 14px;
+}
 .card__block-text {
   margin-bottom: 12px;
 }
+.card__block-text_for-cart {
+  margin-bottom: 16px;
+}
 .card__block-price {
   display: flex;
-  -moz-column-gap: 32px;
-       column-gap: 32px;
+  column-gap: 32px;
   margin-bottom: 8px;
+}
+.card__block-price_for-cart {
+  margin-bottom: 15px;
 }
 .card__img {
   display: block;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 .card__title {
   font-family: Montserrat;
@@ -406,6 +415,74 @@ select {
   color: rgb(136, 136, 136);
   text-decoration-line: line-through;
 }
+.card__price_for-cart {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+}
+.card__link {
+  display: flex;
+  gap: 30px;
+}
+.card__link a {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #000000;
+  margin-top: 15px;
+}
+.card__counter {
+  width: 71px;
+  height: 51px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Poppins;
+  border-radius: 6px;
+  background: rgb(247, 246, 246);
+  border: none;
+}
+
+.cart {
+  grid-column: span 8;
+}
+.cart__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.cart__block-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 32px;
+}
+.cart__btn {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 50px;
+}
+.cart__btn button {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 200px;
+  height: 37px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #020202;
+  border-radius: 50px;
+}
 
 .form-filter {
   position: absolute;
@@ -422,8 +499,7 @@ select {
 .form-filter__block {
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 65px;
-       column-gap: 65px;
+  column-gap: 65px;
 }
 .form-filter__block-items {
   display: flex;
@@ -655,6 +731,78 @@ input[type=checkbox]:checked + label::after {
   background: #ff65a6;
 }
 
+.form-pay {
+  grid-column: span 4;
+  max-width: 379px;
+  border-radius: 20px;
+  background: rgb(247, 246, 246);
+  display: flex;
+  flex-direction: column;
+  padding-top: 42px;
+  padding-bottom: 142px;
+}
+.form-pay__title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin-bottom: 35px;
+}
+.form-pay__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 27px;
+  padding-right: 64px;
+}
+.form-pay__contact input {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: inherit;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(202, 205, 216);
+  padding-bottom: 2.5px;
+  margin-bottom: 44px;
+}
+.form-pay__contact input:last-of-type {
+  margin-bottom: 64.5px;
+}
+.form-pay__price-total {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 18px;
+}
+.form-pay-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.form-pay-btn__submit {
+  display: flex;
+  width: 287px;
+  height: 41px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #040404;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 0 calc((100% - 786px) / 2);
@@ -664,8 +812,7 @@ input[type=checkbox]:checked + label::after {
   }
   .content__grid {
     row-gap: 30px;
-    -moz-column-gap: 29px;
-         column-gap: 29px;
+    column-gap: 29px;
   }
   .card {
     grid-column: span 6;
@@ -687,6 +834,12 @@ input[type=checkbox]:checked + label::after {
   .form-filter {
     left: -124px;
   }
+  .cart {
+    grid-column: 1/-1;
+  }
+  .form-pay {
+    grid-column: 1/-1;
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -706,8 +859,7 @@ input[type=checkbox]:checked + label::after {
   }
   .header__nav-icon {
     display: flex;
-    -moz-column-gap: 32px;
-         column-gap: 32px;
+    column-gap: 32px;
   }
   .header__icon {
     display: block;
@@ -773,8 +925,7 @@ input[type=checkbox]:checked + label::after {
   }
   .content__block-nav {
     flex-direction: column;
-    -moz-column-gap: 0;
-         column-gap: 0;
+    column-gap: 0;
     row-gap: 14px;
   }
   .content__block-btn {
@@ -792,7 +943,7 @@ input[type=checkbox]:checked + label::after {
   }
   .card__title {
     font-family: Montserrat;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 100%;
   }
@@ -807,6 +958,9 @@ input[type=checkbox]:checked + label::after {
     font-size: 18px;
     font-weight: 500;
     line-height: 100%;
+  }
+  .card__block-img_for-cart {
+    display: none;
   }
   .form-filter {
     left: 0;

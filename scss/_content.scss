@@ -88,6 +88,22 @@ select {
       grid-column: span 6;
     }
   }
+  &__row {
+    display: flex;
+    column-gap: 31px;
+  }
+  &__body {
+    &_for-cart {
+      max-width: 276px;
+    }
+  }
+  &_for-cart {
+    grid-column: span 5;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    border-top: 0.5px solid rgba(202, 205, 216, 1);
+  }
   &__icon {
     position: absolute;
     width: 24px;
@@ -114,6 +130,9 @@ select {
       &_for {
         margin-bottom: 0;
       }
+      &_for-cart {
+        margin-bottom: 0;
+      }
     }
     &-title {
       margin-bottom: 8px;
@@ -124,14 +143,23 @@ select {
         transform: translate(-50%, -50%);
         margin-bottom: 0;
       }
+      &_for-cart {
+        margin-bottom: 14px;
+      }
     }
     &-text {
       margin-bottom: 12px;
+      &_for-cart {
+        margin-bottom: 16px;
+      }
     }
     &-price {
       display: flex;
       column-gap: 32px;
       margin-bottom: 8px;
+      &_for-cart {
+        margin-bottom: 15px;
+      }
     }
   }
   &__img {
@@ -158,6 +186,68 @@ select {
     &_sale {
       color: rgba(136, 136, 136, 1);
       text-decoration-line: line-through;
+    }
+    &_for-cart {
+      @include font-montserrat(16px, 500, 100%);
+    }
+  }
+  &__link {
+    display: flex;
+    gap: 30px;
+    & a {
+      @include font-montserrat(14px, 400, 17px);
+      color: #000000;
+      margin-top: 15px;
+    }
+  }
+  &__counter {
+    width: 71px;
+    height: 51px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    font-family: Poppins;
+    border-radius: 6px;
+    background: rgb(247, 246, 246);
+    border: none;
+  }
+}
+.cart {
+  grid-column: span 8;
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  &__block-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 32px;
+  }
+  &__btn {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 50px;
+
+    & button {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      width: 200px;
+      height: 37px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      font-family: inherit;
+      box-sizing: border-box;
+      background-color: transparent;
+      border: 1px solid #020202;
+      border-radius: 50px;
     }
   }
 }
@@ -411,4 +501,83 @@ input[type="checkbox"] {
 
 #checkbox-14 + label::before {
   background: #ff65a6;
+}
+
+.form-pay {
+  grid-column: span 4;
+  max-width: 379px;
+  border-radius: 20px;
+  background: rgba(247, 246, 246, 1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 42px;
+  padding-bottom: 142px;
+
+  &__title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    margin-bottom: 35px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 27px;
+    padding-right: 64px;
+
+    & input {
+      width: 100%;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: inherit;
+      line-height: 100%;
+      color: rgb(0, 0, 0);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(202, 205, 216, 1);
+      padding-bottom: 2.5px;
+      margin-bottom: 44px;
+
+      &:last-of-type {
+        margin-bottom: 64.5px;
+      }
+    }
+  }
+
+  &__price-total {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 18px;
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__submit {
+      display: flex;
+      width: 287px;
+      height: 41px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 100%;
+      font-family: inherit;
+      background-color: transparent;
+      border: 1px solid #040404;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
