@@ -117,6 +117,13 @@
   line-height: 24px;
   color: rgb(255, 255, 255);
 }
+.header__button:hover {
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.header__button:hover:hover {
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
 
 .footer {
   padding: 0 calc((100% - 1200px) / 2);
@@ -185,6 +192,18 @@
   border-radius: 16px;
   background: rgba(222, 215, 215, 0.41);
 }
+.footer__form-btn:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.footer__form-btn:hover:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
 .footer__nav-list {
   list-style-type: none;
   display: flex;
@@ -250,6 +269,13 @@ select {
   color: rgb(0, 0, 0);
   text-decoration-line: underline;
 }
+.content__link a:hover {
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.content__link a:hover:hover {
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
 .content__block-nav {
   display: flex;
   justify-content: space-between;
@@ -285,6 +311,18 @@ select {
   border: 1px solid rgb(196, 196, 196);
   border-radius: 20px;
   padding: 10px 22px;
+}
+.content__btn-select:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.content__btn-select:hover:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
 }
 .content__btn::after {
   content: url("../../media/sprite/arrow-down.svg");
@@ -433,6 +471,13 @@ select {
   color: #000000;
   margin-top: 15px;
 }
+.card__link a:hover {
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.card__link a:hover:hover {
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
 .card__counter {
   width: 71px;
   height: 51px;
@@ -483,6 +528,18 @@ select {
   border: 1px solid #020202;
   border-radius: 50px;
 }
+.cart__btn button:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.cart__btn button:hover:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
 
 .form-filter {
   position: absolute;
@@ -494,7 +551,7 @@ select {
   box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
   background: rgb(255, 255, 255);
   padding: 40px 48px;
-  z-index: 1;
+  z-index: 10;
 }
 .form-filter__block {
   display: flex;
@@ -520,6 +577,18 @@ select {
   border: 1px solid rgb(4, 4, 4);
   border-radius: 16px;
   background: rgba(222, 215, 215, 0.41);
+}
+.form-filter__btn:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.form-filter__btn:hover:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
 }
 
 fieldset {
@@ -801,6 +870,18 @@ input[type=checkbox]:checked + label::after {
   border-radius: 20px;
   justify-content: center;
   align-items: center;
+}
+.form-pay-btn__submit:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.form-pay-btn__submit:hover:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
 }
 
 @media (max-width: 1200px) {

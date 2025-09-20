@@ -9,9 +9,26 @@
   line-height: $lh;
 }
 
-@mixin font-montserrat($fs, $fw, $lh) {
-  font-family: Montserrat;
-  font-size: $fs;
-  font-weight: $fw;
-  line-height: $lh;
+@mixin hover-btn() {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+  }
+}
+
+@mixin hover-link() {
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+  &:hover {
+    color: rgba(136, 136, 136, 1);
+    text-decoration: none;
+  }
 }

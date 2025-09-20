@@ -33,6 +33,9 @@ select {
       @include font-montserrat(16px, 400, 24px);
       color: rgba(0, 0, 0, 1);
       text-decoration-line: underline;
+      &:hover {
+        @include hover-link;
+      }
     }
   }
   &__block {
@@ -65,6 +68,9 @@ select {
       border: 1px solid rgba(196, 196, 196, 1);
       border-radius: 20px;
       padding: 10px 22px;
+      &:hover {
+        @include hover-btn;
+      }
     }
     &::after {
       content: url("../../media/sprite/arrow-down.svg");
@@ -198,6 +204,9 @@ select {
       @include font-montserrat(14px, 400, 17px);
       color: #000000;
       margin-top: 15px;
+      &:hover {
+        @include hover-link;
+      }
     }
   }
   &__counter {
@@ -248,6 +257,9 @@ select {
       background-color: transparent;
       border: 1px solid #020202;
       border-radius: 50px;
+      &:hover {
+        @include hover-btn;
+      }
     }
   }
 }
@@ -270,7 +282,7 @@ select {
     box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
     background: rgba(255, 255, 255, 1);
     padding: 40px 48px;
-    z-index: 1;
+    z-index: 10;
 
     &__block {
       display: flex;
@@ -293,6 +305,9 @@ select {
       border: 1px solid rgba(4, 4, 4, 1);
       border-radius: 16px;
       background: rgba(222, 215, 215, 0.41);
+      &:hover {
+        @include hover-btn;
+      }
     }
   }
 }
@@ -578,6 +593,9 @@ input[type="checkbox"] {
       border-radius: 20px;
       justify-content: center;
       align-items: center;
+      &:hover {
+        @include hover-btn;
+      }
     }
   }
 }
