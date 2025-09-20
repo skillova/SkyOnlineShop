@@ -733,6 +733,7 @@ input[type=checkbox]:checked + label::after {
 
 .form-pay {
   grid-column: span 4;
+  max-width: 379px;
   border-radius: 20px;
   background: rgb(247, 246, 246);
   display: flex;
@@ -832,6 +833,12 @@ input[type=checkbox]:checked + label::after {
   }
   .form-filter {
     left: -124px;
+  }
+  .cart {
+    grid-column: 1/-1;
+  }
+  .form-pay {
+    grid-column: 1/-1;
   }
 }
 @media (max-width: 768px) {
@@ -936,7 +943,7 @@ input[type=checkbox]:checked + label::after {
   }
   .card__title {
     font-family: Montserrat;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 100%;
   }
@@ -951,6 +958,9 @@ input[type=checkbox]:checked + label::after {
     font-size: 18px;
     font-weight: 500;
     line-height: 100%;
+  }
+  .card__block-img_for-cart {
+    display: none;
   }
   .form-filter {
     left: 0;

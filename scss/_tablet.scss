@@ -28,8 +28,14 @@
     }
   }
   .form {
-  &-filter {
-    left: -124px;
+    &-filter {
+      left: -124px;
+    }
   }
-}
+  .cart {
+    grid-column: 1 / -1;
+  }
+  .form-pay {
+    grid-column: 1 / -1;
+  }
 }

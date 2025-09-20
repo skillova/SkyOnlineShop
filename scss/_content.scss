@@ -505,6 +505,7 @@ input[type="checkbox"] {
 
 .form-pay {
   grid-column: span 4;
+  max-width: 379px;
   border-radius: 20px;
   background: rgba(247, 246, 246, 1);
   display: flex;
