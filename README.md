@@ -22,6 +22,13 @@
 
 Лэндинг разработан по макету Figma ([посмотреть макет](https://www.figma.com/design/YAglDW9tpAPijXLD58Bkhm/Online-store-website?node-id=0-1&p=f&t=9pchRJjFQTM72WUP-0)).
 
+Чтобы увидеть, как идеи воплощены в коде, посетите [демо‑версию лендинга](http://skillova.beget.tech/).
+
+Здесь вы можете:
+- проверить адаптивность на разных устройствах;
+- оценить скорость загрузки;
+- изучить структуру интерфейса.
+
 <div align="center">
   <div style="width: 96%; height: 450px; overflow: hidden; border: 1px solid #ddd;">
     <div>
