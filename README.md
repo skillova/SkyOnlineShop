@@ -15,7 +15,7 @@
 <div style="margin: 8px 0;"></div>
 
 
-> <img src="example\adaptive.png" style="height: 32px; padding: 8px" alt="Описание"><br>
+> <img src="example\adaptive.webp" style="height: 32px; padding: 8px" alt="Описание"><br>
 > Проект адаптируется под любое устройство без потери функциональности.
 
 <div style="margin: 40px 0;"></div>
