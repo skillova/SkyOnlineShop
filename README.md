@@ -4,12 +4,16 @@
   <div style="margin: 32px 0;"></div>
 
 > <img src="example\html.svg" style="height: 32px; padding: 8px" alt="Описание">
-> <img src="example\css.svg" style="height: 32px; padding: 8px" alt="Описание">
-
+> <img src="example\css.svg" style="height: 32px; padding: 8px" alt="Описание"><br>
 > Проект реализован на чистом HTML/CSS без фреймворков. Нет лишних зависимостей → быстрая загрузка.
+
+<div style="margin: 8px 0;"></div>
 
 > <img src="example\sass.svg" style="height: 32px; padding: 8px" alt="Описание"><br>
 > Проект использует SCSS (синтаксис Sass) для упрощения работы со стилями. SCSS расширяет возможности CSS за счёт переменных, миксинов, вложенности и других функций.
+
+<div style="margin: 8px 0;"></div>
+
 
 > <img src="example\adaptive.png" style="height: 32px; padding: 8px" alt="Описание"><br>
 > Проект адаптируется под любое устройство без потери функциональности.
